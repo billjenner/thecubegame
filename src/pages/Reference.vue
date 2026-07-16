@@ -2,15 +2,11 @@
   <q-page padding>
     <div class="text-h4 q-mb-lg">Definitions</div>
 
-    <div class="row q-col-gutter-lg">
+    <div class="row q-col-gutter-md" style="background-color: #FDECEC; padding-bottom: 16px; padding-right: 16px;">
       <!-- Bananas -->
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <q-card>
-          <q-card-section>
-            <div class="text-h6 text-weight-bold">Cubes</div>
-          </q-card-section>
-
           <q-card-section>
             <img
               src="/Cubes.jpg"
@@ -25,6 +21,10 @@
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Cubes</div>
+            </template>
+
             <q-card-section>
               If the cube you've envisioned is large, you're likely a very confident person. If it's
               small, you're most likely shy and modest.<br />
@@ -43,10 +43,6 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <q-card>
           <q-card-section>
-            <div class="text-h6 text-weight-bold">Ladder</div>
-          </q-card-section>
-
-          <q-card-section>
             <img
               src="/Ladder.jpg"
               alt="Ladder"
@@ -59,6 +55,9 @@
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Ladder</div>
+            </template>
             <q-card-section>
               If you've envisioned the ladder touching the cube, this means you're very connected to
               your friends and rely on them for support. If the ladder is detached, this means you
@@ -78,10 +77,6 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <q-card>
           <q-card-section>
-            <div class="text-h6 text-weight-bold">Horse</div>
-          </q-card-section>
-
-          <q-card-section>
             <img
               src="/Horse.jpg"
               alt="Horse"
@@ -94,6 +89,9 @@
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Horse</div>
+            </template>
             <q-card-section>
               If the horse you imagined is a strong workhorse, that means your ideal partner is
               hardworking and reliable. If you've imagined a more delicate horse, that means your
@@ -111,10 +109,6 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <q-card>
           <q-card-section>
-            <div class="text-h6 text-weight-bold">Storm</div>
-          </q-card-section>
-
-          <q-card-section>
             <img
               src="/Storm.jpg"
               alt="Storm"
@@ -127,6 +121,9 @@
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Storm</div>
+            </template>
             <q-card-section>
               Is the storm you imagined far off in the distance? That means you're living life with
               little worry. If the storm is close to the cube, you're ready to face conflict.<br />
@@ -141,10 +138,6 @@
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
         <q-card>
           <q-card-section>
-            <div class="text-h6 text-weight-bold">Flowers</div>
-          </q-card-section>
-
-          <q-card-section>
             <img
               src="/Flowers.jpg"
               alt="Flowers"
@@ -157,6 +150,9 @@
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Flowers</div>
+            </template>
             <q-card-section>
               The number of flowers you imagined represent the number of children you would like to
               have. If the flowers are close to the cube, it means you desire a close relationship
@@ -168,19 +164,18 @@
         </q-card>
       </div>
     </div>
-    <div class="row q-col-gutter-md q-mt-xl">
+    <div class="row q-col-gutter-md" style="background-color: #E96B67; margin-top: 4px; padding-right: 16px;">
       <div class="col-12 col-md-6">
         <q-card flat bordered>
-          <q-card-section>
-            <div class="text-subtitle1 text-weight-bold">Related Resources</div>
-          </q-card-section>
-
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
             transition-show="jump-down"
             transition-hide="jump-up"
           >
+            <template v-slot:header>
+              <div class="text-subtitle1 text-weight-bold">Related Resources</div>
+            </template>
             <q-card-section>
               <div class="text-weight-bold">Teal Swan Article</div>
               <a
@@ -215,7 +210,7 @@
           </q-expansion-item>
         </q-card>
       </div>
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-md-6">
         <q-card>
           <q-card-section>
             <div class="text-h6 text-weight-bold">The Cube</div>
