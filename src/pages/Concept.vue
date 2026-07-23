@@ -167,9 +167,10 @@
               <div class="text-h6 text-weight-bold">Storm</div>
             </template>
             <q-card-section>
-              Is the storm you imagined far off in the distance? That means you're living life with
-              little worry. If the storm is close to the cube, you're ready to face conflict.<br />
-              If the storm is directly over the cube, your troubles are overwhelming you right now.
+              The storm represents difficulties, uncertainty, and emotional challenges in your life.
+              Its size, intensity, and location reveal how you perceive obstacles, while your
+              reaction to it reflects your coping style, resilience, and emotional response to
+              adversity.
             </q-card-section>
           </q-expansion-item>
         </q-card>
@@ -210,6 +211,18 @@
       class="row q-col-gutter-md"
       style="background-color: #e96b67; margin-top: 4px; padding-right: 16px; padding-bottom: 24px"
     >
+      <div class="col-12 col-md-6">
+        <q-card flat bordered style="width: 60%; max-width: 60%; margin: 0 auto">
+          <q-card-section>
+            <p>
+              Room → Your inner environment Cube → Your identity Ladder → Your ambitions Horse →
+              Your relationships and desires Window → Your view of the world Storm → How you handle
+              adversity Flowers → What you nurture and value
+            </p>
+          </q-card-section>
+        </q-card>
+      </div>
+
       <div class="col-12 col-md-6">
         <q-card flat bordered style="width: 60%; max-width: 60%; margin: 0 auto">
           <q-expansion-item

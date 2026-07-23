@@ -97,8 +97,11 @@
 
         <q-step :name="6" title="5. Window" :done="step > 7">
           <div class="text-body1 q-mb-sm">
-            Now imagine a window in the room. Can you see outside the window? What does outside look
-            like? Is there any objects to see?
+            Now imagine a window in the room. Describe the overall window condition of the window
+            (clear, dirty, broken, covered), presents of window? Size of the window? Can you see
+            outside? What does outside look like? Objects visible outside? Distance of the view? Is
+            the window open or closed? Can you go through the window? Your feelings looking through
+            the window?
           </div>
           <q-input
             v-model="answers.window"
@@ -135,10 +138,12 @@
 
         <q-step :name="8" title="7. Flowers" :done="step > 8">
           <div class="text-body1 q-mb-sm">
-            Now imaginge flowers. Where are the flowers, are they inside or outside? What do they
-            look like, what color are they, how many are there? What kind are they? Are they in a
-            vase or in the ground? How hardy or fragile do they seem to you? Are they alive or dead?
-            How do you feel about the flowers? How do they feel about you?
+            Now imaginge flowers. Where are the flowers, are they inside, outside, close or far away
+            from other objects? What do they look like, what color are they, how many are there?
+            What kind are they? What color are they? Are they in a vase or in the ground? How hardy
+            or fragile do they seem to you? Are they alive or dead? How do you feel about the
+            flowers? How do they feel about you? Are you protecting, caring for, or ignoring the
+            flowers?
           </div>
           <q-input
             v-model="answers.flowers"
@@ -173,7 +178,8 @@ const answers = ref({
   cube: '',
   ladder: '',
   horse: '',
-  flowers: '',
+  window: '',
   storm: '',
+  flowers: '',
 })
 </script>

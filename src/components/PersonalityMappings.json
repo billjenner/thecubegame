@@ -1,0 +1,414 @@
+{
+  "Room": {
+    "symbol": "Inner world and self-perception",
+    "features": {
+      "size": {
+        "small": {
+          "symbolicMeaning": "Sense of privacy, simplicity, and personal boundaries",
+          "interpretation": "You may value control, intimacy, and having a comfortable personal space. You may prefer depth over expansion."
+        },
+        "large": {
+          "symbolicMeaning": "Openness, confidence, and possibility",
+          "interpretation": "You may see yourself as capable of growth and comfortable exploring new experiences."
+        },
+        "vast": {
+          "symbolicMeaning": "Imagination, freedom, and unlimited possibilities",
+          "interpretation": "You may have a rich inner world, ambitious dreams, or a strong desire for exploration and discovery."
+        }
+      },
+
+      "windows": {
+        "many": {
+          "symbolicMeaning": "Openness and connection to the outside world",
+          "interpretation": "You may be curious, receptive to new ideas, and interested in maintaining connections with others."
+        },
+        "few": {
+          "symbolicMeaning": "Selective openness and privacy",
+          "interpretation": "You may carefully choose what influences you and who you allow into your personal world."
+        },
+        "none": {
+          "symbolicMeaning": "Self-containment and inward focus",
+          "interpretation": "You may be introspective, private, or prefer relying on your own thoughts and experiences."
+        }
+      },
+
+      "doors": {
+        "multiple": {
+          "symbolicMeaning": "Choices, opportunities, and flexibility",
+          "interpretation": "You may see many possible paths in life and enjoy having options available."
+        },
+        "one": {
+          "symbolicMeaning": "Focus and commitment",
+          "interpretation": "You may prefer a clear direction and concentrate deeply on chosen goals."
+        },
+        "none": {
+          "symbolicMeaning": "Strong boundaries or restriction",
+          "interpretation": "You may value security and protection, or you may feel limited by current circumstances."
+        }
+      },
+
+      "comfort": {
+        "comfortable": {
+          "symbolicMeaning": "Self-acceptance and emotional stability",
+          "interpretation": "You may feel at peace with yourself and your current situation."
+        },
+        "uncomfortable": {
+          "symbolicMeaning": "Internal tension or desire for change",
+          "interpretation": "You may feel unsettled, challenged, or motivated to improve your circumstances."
+        }
+      },
+
+      "safety": {
+        "safe": {
+          "symbolicMeaning": "Security and belonging",
+          "interpretation": "You likely experience yourself as having a stable emotional foundation."
+        },
+        "unsafe": {
+          "symbolicMeaning": "Vulnerability and uncertainty",
+          "interpretation": "You may feel exposed, cautious, or aware of areas where you want greater security."
+        }
+      }
+    }
+  },
+
+  "Cube": {
+    "symbol": "Identity and self-image",
+    "features": {
+      "location": {
+        "prominent": {
+          "symbolicMeaning": "Confidence and presence",
+          "interpretation": "You may see yourself as someone who has an important place in the world and wants to make an impact."
+        },
+        "hidden": {
+          "symbolicMeaning": "Privacy and humility",
+          "interpretation": "You may prefer staying behind the scenes or keeping parts of yourself protected."
+        },
+        "distant": {
+          "symbolicMeaning": "Self-reflection and emotional distance",
+          "interpretation": "You may be observing yourself from a distance or exploring your identity."
+        }
+      },
+
+      "position": {
+        "ground": {
+          "symbolicMeaning": "Stability and practicality",
+          "interpretation": "You may value realism, structure, and staying connected to reality."
+        },
+        "floating": {
+          "symbolicMeaning": "Imagination and idealism",
+          "interpretation": "You may be creative, visionary, or comfortable exploring ideas beyond ordinary limits."
+        }
+      },
+
+      "size": {
+        "large": {
+          "symbolicMeaning": "Strong identity and confidence",
+          "interpretation": "You may see yourself as capable, influential, or someone who wants to make a significant contribution."
+        },
+        "small": {
+          "symbolicMeaning": "Humility and privacy",
+          "interpretation": "You may be modest, reserved, or prefer not to dominate attention."
+        }
+      },
+
+      "transparency": {
+        "transparent": {
+          "symbolicMeaning": "Openness and emotional visibility",
+          "interpretation": "You may value honesty and allowing others to understand your thoughts and feelings."
+        },
+        "opaque": {
+          "symbolicMeaning": "Privacy and personal boundaries",
+          "interpretation": "You may carefully control what others see and protect your inner thoughts."
+        }
+      },
+
+      "texture": {
+        "smooth": {
+          "symbolicMeaning": "Adaptability and ease",
+          "interpretation": "You may see yourself as flexible, approachable, and able to handle change."
+        },
+        "rough": {
+          "symbolicMeaning": "Resilience and complexity",
+          "interpretation": "You may view yourself as shaped by experiences, challenges, and personal growth."
+        }
+      },
+
+      "condition": {
+        "perfect": {
+          "symbolicMeaning": "Balance and confidence",
+          "interpretation": "You may feel comfortable with who you are and recognize your strengths."
+        },
+        "damaged": {
+          "symbolicMeaning": "Challenges and imperfections",
+          "interpretation": "You may recognize struggles, past experiences, or areas where growth is still occurring."
+        }
+      }
+    }
+  },
+
+  "Ladder": {
+    "symbol": "Goals, ambitions, growth, and personal progress",
+    "features": {
+      "location": {
+        "nearCube": {
+          "symbolicMeaning": "Goals connected to identity",
+          "interpretation": "Your ambitions are closely tied to who you are and how you define yourself."
+        },
+        "farFromCube": {
+          "symbolicMeaning": "Separate or distant aspirations",
+          "interpretation": "Your goals may represent a future version of yourself that feels separate from your current identity."
+        }
+      },
+
+      "relationshipToRoom": {
+        "insideRoom": {
+          "symbolicMeaning": "Growth integrated into life",
+          "interpretation": "You may see personal development as a natural part of your everyday life."
+        },
+        "outsideRoom": {
+          "symbolicMeaning": "Future goals beyond current circumstances",
+          "interpretation": "You may feel your ambitions require leaving your current situation or entering a new phase of life."
+        }
+      },
+
+      "relationshipToCube": {
+        "touching": {
+          "symbolicMeaning": "Identity and ambition are connected",
+          "interpretation": "Your goals are deeply connected to your sense of purpose and self-worth."
+        },
+        "near": {
+          "symbolicMeaning": "Aligned aspirations",
+          "interpretation": "Your ambitions support and reinforce your personal identity."
+        },
+        "far": {
+          "symbolicMeaning": "Separate ambitions",
+          "interpretation": "Your goals may feel like something you are working toward but have not yet incorporated into your identity."
+        }
+      },
+
+      "support": {
+        "leaning": {
+          "symbolicMeaning": "Reliance on support systems",
+          "interpretation": "You may value guidance, relationships, teamwork, or external resources when pursuing goals."
+        },
+        "freeStanding": {
+          "symbolicMeaning": "Independence and self-reliance",
+          "interpretation": "You may prefer achieving success through your own abilities and determination."
+        }
+      },
+
+      "height": {
+        "tall": {
+          "symbolicMeaning": "Large ambitions and aspirations",
+          "interpretation": "You may set challenging goals and desire significant achievement."
+        },
+        "short": {
+          "symbolicMeaning": "Practical and achievable goals",
+          "interpretation": "You may prefer realistic objectives and measurable progress."
+        }
+      },
+
+      "climbDifficulty": {
+        "easy": {
+          "symbolicMeaning": "Confidence and preparedness",
+          "interpretation": "You may believe you have the ability and resources needed to achieve your goals."
+        },
+        "difficult": {
+          "symbolicMeaning": "Challenges and obstacles",
+          "interpretation": "You may recognize barriers or feel that progress requires significant effort."
+        }
+      },
+
+      "material": {
+        "strong": {
+          "symbolicMeaning": "Durability and reliability",
+          "interpretation": "You approach growth with preparation, discipline, and confidence."
+        },
+        "fragile": {
+          "symbolicMeaning": "Uncertainty and caution",
+          "interpretation": "You may feel your path requires careful decisions or additional support."
+        }
+      },
+
+      "condition": {
+        "new": {
+          "symbolicMeaning": "Fresh opportunities",
+          "interpretation": "You may feel optimistic and ready for new challenges."
+        },
+        "damaged": {
+          "symbolicMeaning": "Past obstacles",
+          "interpretation": "Previous experiences may influence how you approach future goals."
+        }
+      }
+    }
+  },
+
+  "Horse": {
+    "symbol": "Soulmate, romantic partner, and intimate relationships",
+    "features": {
+      "location": {
+        "prominent": {
+          "symbolicMeaning": "Love as an important life priority",
+          "interpretation": "Romantic connection may play a central role in your emotional life."
+        },
+        "distant": {
+          "symbolicMeaning": "Emotional independence",
+          "interpretation": "You may value personal space or experience love as something separate from your identity."
+        }
+      },
+
+      "relationshipToCube": {
+        "close": {
+          "symbolicMeaning": "Strong emotional connection",
+          "interpretation": "You may desire a partner who is deeply connected with your identity and life."
+        },
+        "far": {
+          "symbolicMeaning": "Independence within relationships",
+          "interpretation": "You may value maintaining individuality while sharing a relationship."
+        },
+        "touching": {
+          "symbolicMeaning": "Deep intimacy and unity",
+          "interpretation": "You may seek a strong emotional bond and sense of partnership."
+        }
+      },
+
+      "size": {
+        "large": {
+          "symbolicMeaning": "Strong partner influence",
+          "interpretation": "A romantic relationship may have a major impact on your life and decisions."
+        },
+        "small": {
+          "symbolicMeaning": "Supportive but independent relationship",
+          "interpretation": "You may value love while maintaining a strong sense of individuality."
+        }
+      },
+
+      "appearance": {
+        "beautifulHealthy": {
+          "symbolicMeaning": "Positive expectations of love",
+          "interpretation": "You may seek admiration, attraction, and emotional fulfillment."
+        },
+        "injuredNeglected": {
+          "symbolicMeaning": "Relationship concerns",
+          "interpretation": "You may be sensitive to vulnerability, trust issues, or emotional wounds."
+        }
+      },
+
+      "behavior": {
+        "calm": {
+          "symbolicMeaning": "Peaceful partnership",
+          "interpretation": "You may value stability, trust, and emotional security."
+        },
+        "playful": {
+          "symbolicMeaning": "Joy and connection",
+          "interpretation": "You may desire fun, affection, and emotional warmth."
+        },
+        "running": {
+          "symbolicMeaning": "Passion and freedom",
+          "interpretation": "You may value excitement, adventure, and independence."
+        },
+        "restless": {
+          "symbolicMeaning": "Uncertainty or unmet needs",
+          "interpretation": "You may experience concerns about stability or emotional connection."
+        }
+      },
+
+      "freedom": {
+        "free": {
+          "symbolicMeaning": "Trust and independence",
+          "interpretation": "You may believe healthy relationships require freedom and mutual respect."
+        },
+        "tied": {
+          "symbolicMeaning": "Commitment and security",
+          "interpretation": "You may value loyalty, stability, and strong attachment."
+        }
+      },
+
+      "saddle": {
+        "present": {
+          "symbolicMeaning": "Shared direction and commitment",
+          "interpretation": "You may desire a relationship built around teamwork and shared goals."
+        },
+        "absent": {
+          "symbolicMeaning": "Spontaneity and independence",
+          "interpretation": "You may prefer relationships that feel natural and unrestricted."
+        }
+      },
+
+      "yourFeeling": {
+        "love": {
+          "symbolicMeaning": "Emotional openness",
+          "interpretation": "You are receptive to intimacy and connection."
+        },
+        "fear": {
+          "symbolicMeaning": "Emotional protection",
+          "interpretation": "You may be cautious about vulnerability or trust."
+        }
+      }
+    }
+  },
+
+  "Window": {
+    "symbol": "Perspective, awareness, curiosity, and connection to the outside world",
+    "features": {
+      "presence": {
+        "exists": {
+          "symbolicMeaning": "Openness to experiences",
+          "interpretation": "You are interested in exploring possibilities beyond your immediate environment."
+        },
+        "missing": {
+          "symbolicMeaning": "Self-containment",
+          "interpretation": "You may prefer reflection, privacy, and focusing inward."
+        }
+      },
+
+      "size": {
+        "large": {
+          "symbolicMeaning": "Broad perspective",
+          "interpretation": "You may be curious, open-minded, and interested in understanding the world."
+        },
+        "small": {
+          "symbolicMeaning": "Selective awareness",
+          "interpretation": "You may carefully choose what influences your thoughts and attention."
+        }
+      },
+
+      "outsideView": {
+        "pleasant": {
+          "symbolicMeaning": "Optimistic worldview",
+          "interpretation": "You may expect positive possibilities and opportunities ahead."
+        },
+        "dark": {
+          "symbolicMeaning": "Concern about uncertainty",
+          "interpretation": "You may approach the future cautiously or be aware of potential challenges."
+        }
+      },
+
+      "clarity": {
+        "clear": {
+          "symbolicMeaning": "Understanding and awareness",
+          "interpretation": "You may feel confident in your perception of yourself and the world."
+        },
+        "dirty": {
+          "symbolicMeaning": "Uncertainty or emotional filters",
+          "interpretation": "You may feel that something is limiting your ability to see clearly."
+        },
+        "broken": {
+          "symbolicMeaning": "Disruption in perspective",
+          "interpretation": "You may have experienced events that changed how you view the world."
+        }
+      },
+
+      "openClosed": {
+        "open": {
+          "symbolicMeaning": "Receptiveness and communication",
+          "interpretation": "You may welcome new ideas, relationships, and experiences."
+        },
+        "closed": {
+          "symbolicMeaning": "Protection and boundaries",
+          "interpretation": "You may value safety and control over outside influences."
+        }
+      }
+    }
+  }
+}

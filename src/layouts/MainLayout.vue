@@ -1,6 +1,6 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated style="background-color: #e53935">
+    <q-header elevated color="primary">
       <q-toolbar>
         <q-toolbar-title>The Cube</q-toolbar-title>
 
@@ -9,7 +9,7 @@
           label="Intro"
           to="/"
           class="q-mx-sm"
-          style="min-width: 140px"
+          style="min-width: 172px"
           :style="buttonStyle('/')"
           @mouseover="hoveredPath = '/'"
           @mouseleave="hoveredPath = null"
@@ -19,7 +19,7 @@
           label="Personality Test"
           to="/analyze"
           class="q-mx-sm"
-          style="min-width: 140px"
+          style="min-width: 172px"
           :style="buttonStyle('/analyze')"
           @mouseover="hoveredPath = '/analyze'"
           @mouseleave="hoveredPath = null"
@@ -29,7 +29,7 @@
           label="PERSONALITY REVIEW"
           to="/personality-review"
           class="q-mx-sm"
-          style="min-width: 140px"
+          style="min-width: 172px"
           :style="buttonStyle('/personality-review')"
           @mouseover="hoveredPath = '/personality-review'"
           @mouseleave="hoveredPath = null"
@@ -39,7 +39,7 @@
           label="Concept"
           to="/theary"
           class="q-mx-sm"
-          style="min-width: 140px"
+          style="min-width: 172px"
           :style="buttonStyle('/theary')"
           @mouseover="hoveredPath = '/theary'"
           @mouseleave="hoveredPath = null"
@@ -49,7 +49,7 @@
           label="Login"
           to="/login"
           class="q-mx-sm"
-          style="min-width: 120px"
+          style="min-width: 172px"
           :style="buttonStyle('/login')"
           @mouseover="hoveredPath = '/login'"
           @mouseleave="hoveredPath = null"
@@ -79,6 +79,6 @@ function buttonStyle(path) {
     return { backgroundColor: '#42a5f5' }
   }
 
-  return { backgroundColor: '#ef5350' }
+  return { backgroundColor: '#D9433F' }
 }
 </script>
