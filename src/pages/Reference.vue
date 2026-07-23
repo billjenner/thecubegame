@@ -2,7 +2,10 @@
   <q-page padding>
     <div class="text-h4 q-mb-lg">Definitions</div>
 
-    <div class="row q-col-gutter-md" style="background-color: #FDECEC; padding-bottom: 16px; padding-right: 16px;">
+    <div
+      class="row q-col-gutter-md"
+      style="background-color: #fdecec; padding-bottom: 16px; padding-right: 16px"
+    >
       <!-- Bananas -->
 
       <div class="col-12 col-sm-6 col-md-4 col-lg-3">
@@ -164,7 +167,10 @@
         </q-card>
       </div>
     </div>
-    <div class="row q-col-gutter-md" style="background-color: #E96B67; margin-top: 4px; padding-right: 16px;">
+    <div
+      class="row q-col-gutter-md"
+      style="background-color: #e96b67; margin-top: 4px; padding-right: 16px"
+    >
       <div class="col-12 col-md-6">
         <q-card flat bordered>
           <q-expansion-item
