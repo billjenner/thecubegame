@@ -1,21 +1,15 @@
 <template>
   <q-page padding>
-    <div class="text-h4 q-mb-lg">Definitions</div>
+    <div class="text-h4 q-mb-lg text-center">Concept</div>
 
     <div
       class="row q-col-gutter-md"
       style="background-color: #fdecec; padding-bottom: 16px; padding-right: 16px"
     >
-      <!-- Bananas -->
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
         <q-card>
           <q-card-section>
-            <img
-              src="/Cubes.jpg"
-              alt="Cubes"
-              style="max-width: 100%; height: auto; display: block"
-            />
+            <img src="/Room.jpg" alt="Cube" style="max-width: 100%; height: auto; display: block" />
           </q-card-section>
 
           <q-expansion-item
@@ -25,7 +19,52 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Cubes</div>
+              <div class="text-h6 text-weight-bold">Room</div>
+            </template>
+
+            <q-card-section>
+              <p>
+                In the version of The Cube Test that Neal Strauss uses, the room (or, in many other
+                versions, the desert) represents your world or your personal universe—the
+                environment in which you perceive yourself to exist. It is the backdrop against
+                which every other symbol is interpreted.
+              </p>
+              <p>
+                Specifically, the room's characteristics are commonly interpreted as follows: Size
+                of the room – How expansive or limited you perceive your life and opportunities to
+                be. A large room suggests you see your world as full of possibilities. A small room
+                can suggest you perceive your world as more constrained or intimate. Brightness –
+                Your outlook on life. Bright, open rooms often symbolize optimism. Dark or dim rooms
+                may reflect uncertainty, caution, or feeling limited. Walls, windows, and doors –
+                How open or closed you feel your world is. Many windows or open doors can symbolize
+                openness to new experiences. Solid walls with few openings may symbolize privacy,
+                security, or feeling boxed in. Condition of the room – How you currently experience
+                your life. Clean and orderly may represent feeling in control. Cluttered or damaged
+                may reflect feeling overwhelmed or that life is chaotic. The room itself is not
+                usually the primary focus of the test. It serves as the context for the other
+                objects: Cube = You / your self-image. Ladder = Your goals or ambitions. Horse =
+                Your ideal partner or significant relationship. Flowers = Friends and family. Storm
+                = Problems, stress, or challenges.
+              </p>
+            </q-card-section>
+          </q-expansion-item>
+        </q-card>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
+        <q-card>
+          <q-card-section>
+            <img src="/Cube.jpg" alt="Cube" style="max-width: 100%; height: auto; display: block" />
+          </q-card-section>
+
+          <q-expansion-item
+            expand-icon="keyboard_arrow_down"
+            expanded-icon="keyboard_arrow_up"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+          >
+            <template v-slot:header>
+              <div class="text-h6 text-weight-bold">Cube</div>
             </template>
 
             <q-card-section>
@@ -43,7 +82,7 @@
 
       <!-- Watermelon -->
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
         <q-card>
           <q-card-section>
             <img
@@ -77,7 +116,7 @@
 
       <!-- Grapes -->
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
         <q-card>
           <q-card-section>
             <img
@@ -109,7 +148,7 @@
 
       <!-- Kiwi -->
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
         <q-card>
           <q-card-section>
             <img
@@ -138,7 +177,7 @@
 
       <!-- Apples -->
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
         <q-card>
           <q-card-section>
             <img
@@ -169,10 +208,10 @@
     </div>
     <div
       class="row q-col-gutter-md"
-      style="background-color: #e96b67; margin-top: 4px; padding-right: 16px"
+      style="background-color: #e96b67; margin-top: 4px; padding-right: 16px; padding-bottom: 24px"
     >
       <div class="col-12 col-md-6">
-        <q-card flat bordered>
+        <q-card flat bordered style="width: 60%; max-width: 60%; margin: 0 auto">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -217,11 +256,11 @@
         </q-card>
       </div>
       <div class="col-12 col-md-6">
-        <q-card>
+        <q-card style="width: 60%; max-width: 60%; margin: 0 auto">
           <q-card-section>
             <div class="text-h6 text-weight-bold">The Cube</div>
           </q-card-section>
-          <div style="max-width: 100%; width: min(100%, 480px); margin: 4 auto">
+          <div style="width: 100%; max-width: 100%">
             <q-video
               src="https://www.youtube.com/embed/5FIPIuw5KXY?si=o6BYI5lLmV9AH4YU"
               :ratio="16 / 9"

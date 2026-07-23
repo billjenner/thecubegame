@@ -1,16 +1,59 @@
 <template>
   <q-layout view="lHh Lpr lFf">
-    <q-header elevated>
+    <q-header elevated style="background-color: #e53935">
       <q-toolbar>
-        <q-toolbar-title> Quasar App </q-toolbar-title>
+        <q-toolbar-title>The Cube</q-toolbar-title>
 
-        <q-btn flat label="IndexPage" to="/" />
-        <q-btn flat label="Analyze" to="/analyze" />
-        <q-btn flat label="PersonalityReview" to="/personality-review" />
-        <q-btn flat label="Theary" to="/theary" />
-        <q-btn flat label="Reference" to="/reference" />
-
-        <div>Quasar v{{ $q.version }}</div>
+        <q-btn
+          flat
+          label="Intro"
+          to="/"
+          class="q-mx-sm"
+          style="min-width: 140px"
+          :style="buttonStyle('/')"
+          @mouseover="hoveredPath = '/'"
+          @mouseleave="hoveredPath = null"
+        />
+        <q-btn
+          flat
+          label="Personality Test"
+          to="/analyze"
+          class="q-mx-sm"
+          style="min-width: 140px"
+          :style="buttonStyle('/analyze')"
+          @mouseover="hoveredPath = '/analyze'"
+          @mouseleave="hoveredPath = null"
+        />
+        <q-btn
+          flat
+          label="PERSONALITY REVIEW"
+          to="/personality-review"
+          class="q-mx-sm"
+          style="min-width: 140px"
+          :style="buttonStyle('/personality-review')"
+          @mouseover="hoveredPath = '/personality-review'"
+          @mouseleave="hoveredPath = null"
+        />
+        <q-btn
+          flat
+          label="Concept"
+          to="/theary"
+          class="q-mx-sm"
+          style="min-width: 140px"
+          :style="buttonStyle('/theary')"
+          @mouseover="hoveredPath = '/theary'"
+          @mouseleave="hoveredPath = null"
+        />
+        <q-btn
+          flat
+          label="Login"
+          to="/login"
+          class="q-mx-sm"
+          style="min-width: 120px"
+          :style="buttonStyle('/login')"
+          @mouseover="hoveredPath = '/login'"
+          @mouseleave="hoveredPath = null"
+        />
       </q-toolbar>
     </q-header>
 
@@ -20,4 +63,22 @@
   </q-layout>
 </template>
 
-<script setup></script>
+<script setup>
+import { ref } from 'vue'
+import { useRoute } from 'vue-router'
+
+const route = useRoute()
+const hoveredPath = ref(null)
+
+function buttonStyle(path) {
+  if (route.path === path) {
+    return { backgroundColor: '#4caf50' }
+  }
+
+  if (hoveredPath.value === path) {
+    return { backgroundColor: '#42a5f5' }
+  }
+
+  return { backgroundColor: '#ef5350' }
+}
+</script>
