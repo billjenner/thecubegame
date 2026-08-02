@@ -26,21 +26,11 @@
 
         <q-btn color="negative" label="Log In" type="submit" class="full-width" />
 
-        <q-btn
-          flat
-          color="primary"
-          label="Create User"
-          to="/create-login"
-          class="full-width q-mt-sm"
-        />
-        <q-btn
-          flat
-          color="primary"
-          label="Forgot Password"
-          to="/forgot-password"
-          class="full-width q-mt-sm"
-        />
-        <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" />
+        <div class="row q-col-gutter-sm q-mt-sm">
+          <q-btn flat color="accent" label="Create User" to="/create-login" class="col" />
+          <q-btn flat color="accent" label="Forgot Password" to="/forgot-password" class="col" />
+        </div>
+        <!-- <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" /> -->
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">

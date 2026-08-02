@@ -72,11 +72,11 @@ const hoveredPath = ref(null)
 
 function buttonStyle(path) {
   if (route.path === path) {
-    return { backgroundColor: '#4caf50' }
+    return { backgroundColor: 'var(--q-secondary)' }
   }
 
   if (hoveredPath.value === path) {
-    return { backgroundColor: '#42a5f5' }
+    return { backgroundColor: 'var(--q-accent)' }
   }
 
   return { backgroundColor: '#D9433F' }

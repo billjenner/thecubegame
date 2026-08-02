@@ -51,7 +51,7 @@
                           :key="field.key"
                           class="q-pa-sm rounded-borders"
                           :class="
-                            field.key === 'interpretation' ? 'bg-accent text-white' : 'bg-white'
+                            field.key === 'interpretation' ? 'bg-secondary text-white' : 'bg-white'
                           "
                           :style="
                             field.key === 'interpretation' ? 'margin-top: 8px; padding: 14px;' : ''
