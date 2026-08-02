@@ -1,6 +1,6 @@
 <template>
   <q-page class="q-pa-md">
-    <div class="q-mx-auto" style="max-width: 1100px; width: 100%">
+    <div class="q-mx-auto" style="max-width: 96vw; width: 96%">
       <div class="text-h5 text-center q-mb-md">Personality Review</div>
 
       <q-card>
@@ -16,7 +16,7 @@
             row-key="id"
             flat
             bordered
-            :rows-per-page-options="[10, 20, 50]"
+            :rows-per-page-options="[10, 50]"
           >
             <template #body="props">
               <q-tr :props="props">
@@ -30,7 +30,13 @@
                     @click="toggleExpanded(props.row)"
                   />
                 </q-td>
-                <q-td v-for="col in props.cols" :key="col.name" :props="props">
+                <q-td
+                  v-for="col in props.cols"
+                  :key="col.name"
+                  :props="props"
+                  class="wrap-content"
+                  style="white-space: normal; word-break: break-word; max-width: 280px"
+                >
                   {{ col.value }}
                 </q-td>
               </q-tr>
@@ -39,10 +45,34 @@
                   <q-card flat bordered class="bg-grey-1">
                     <q-card-section>
                       <div class="text-subtitle2 q-mb-sm">Answer details</div>
-                      <div class="row q-col-gutter-sm">
-                        <div v-for="field in detailFields" :key="field.key" class="col-12 col-sm-6">
-                          <div class="text-caption text-grey-7">{{ field.label }}</div>
-                          <div class="text-body2">{{ props.row[field.key] || '—' }}</div>
+                      <div class="column q-gutter-sm">
+                        <div
+                          v-for="field in detailFields"
+                          :key="field.key"
+                          class="q-pa-sm rounded-borders"
+                          :class="
+                            field.key === 'interpretation' ? 'bg-accent text-white' : 'bg-white'
+                          "
+                          :style="
+                            field.key === 'interpretation' ? 'margin-top: 8px; padding: 14px;' : ''
+                          "
+                        >
+                          <div
+                            :class="
+                              field.key === 'interpretation'
+                                ? 'text-caption text-white-7'
+                                : 'text-caption text-grey-7'
+                            "
+                          >
+                            {{ field.label }}
+                          </div>
+                          <div
+                            class="text-body2 q-mt-xs mt-10"
+                            :class="field.key === 'interpretation' ? 'text-white' : ''"
+                            style="white-space: normal; word-break: break-word"
+                          >
+                            {{ props.row[field.key] || '—' }}
+                          </div>
                         </div>
                       </div>
                     </q-card-section>
@@ -100,7 +130,18 @@ function toggleExpanded(row) {
 function formatDate(value) {
   if (!value) return '—'
   const date = new Date(value)
-  return Number.isNaN(date.getTime()) ? value : date.toLocaleString()
+
+  if (Number.isNaN(date.getTime())) {
+    return value
+  }
+
+  const month = String(date.getMonth() + 1).padStart(2, '0')
+  const day = String(date.getDate()).padStart(2, '0')
+  const year = String(date.getFullYear()).slice(-2)
+  const hours = String(date.getHours()).padStart(2, '0')
+  const minutes = String(date.getMinutes()).padStart(2, '0')
+
+  return `${month}-${day}-${year} ${hours}:${minutes}`
 }
 
 async function loadAnswers() {
@@ -123,9 +164,9 @@ async function loadAnswers() {
       email: answer.email,
       fname: user.fname || '',
       lname: user.lname || '',
-      date_time: formatDate(answer.date_time),
       expand: false,
       ...answer,
+      date_time: formatDate(answer.date_time),
     }
   })
 }
