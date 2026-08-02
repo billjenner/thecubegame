@@ -29,7 +29,7 @@
         <q-btn
           flat
           color="primary"
-          label="Create Account"
+          label="Create User"
           to="/create-login"
           class="full-width q-mt-sm"
         />

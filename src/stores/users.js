@@ -26,6 +26,22 @@ export const useUsersStore = defineStore('Users', {
         lname,
       }
 
+      const { data: existingUser, error: lookupError } = await supabase
+        .from('users')
+        .select('email')
+        .eq('email', normalizedEmail)
+        .maybeSingle()
+
+      if (lookupError) {
+        this.error = lookupError.message
+        return null
+      }
+
+      if (existingUser) {
+        this.error = 'User already exists'
+        return null
+      }
+
       const { data, error } = await supabase
         .from('users')
         .upsert(user, { onConflict: 'email' })
@@ -37,7 +53,7 @@ export const useUsersStore = defineStore('Users', {
         return null
       }
 
-      this.users = this.users.filter((account) => account.email !== normalizedEmail)
+      this.users = this.users.filter((user) => user.email !== normalizedEmail)
       this.users.push(data)
       this.currentUser = data
       return data

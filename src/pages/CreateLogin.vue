@@ -1,7 +1,7 @@
 <template>
   <q-page class="flex flex-center q-pa-md">
     <q-card class="q-pa-lg" style="width: min(100%, 460px)">
-      <div class="text-h5 text-center q-mb-md">Create Account</div>
+      <div class="text-h5 text-center q-mb-md">Create User</div>
 
       <q-form @submit.prevent="handleSubmit" class="q-gutter-md">
         <q-input
@@ -40,7 +40,7 @@
           :rules="[(val) => !!val || 'Password is required']"
         />
 
-        <q-btn color="negative" label="Create Login" type="submit" class="full-width" />
+        <q-btn color="negative" label="Create User" type="submit" class="full-width" />
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">
@@ -75,11 +75,11 @@ async function handleSubmit() {
   const result = await store.saveUser(email.value, password.value, fname.value, lname.value)
 
   if (result) {
-    message.value = `Account created for ${store.currentUser?.email}`
+    message.value = `User created for ${store.currentUser?.email}`
     messageClass.value = 'text-positive'
     router.push('/users')
   } else {
-    message.value = store.error || 'Unable to save account.'
+    message.value = store.error || 'Unable to save user.'
     messageClass.value = 'text-negative'
   }
 }
