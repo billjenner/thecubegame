@@ -65,16 +65,22 @@ const password = ref('')
 const message = ref('')
 const messageClass = ref('text-positive')
 
-function handleSubmit() {
+async function handleSubmit() {
   if (!fname.value.trim() || !lname.value.trim() || !email.value.trim() || !password.value) {
     message.value = 'Please enter first name, last name, email, and password.'
     messageClass.value = 'text-negative'
     return
   }
 
-  store.saveUser(email.value, password.value, fname.value, lname.value)
-  message.value = `Account created for ${store.currentUser?.email}`
-  messageClass.value = 'text-positive'
-  router.push('/users')
+  const result = await store.saveUser(email.value, password.value, fname.value, lname.value)
+
+  if (result) {
+    message.value = `Account created for ${store.currentUser?.email}`
+    messageClass.value = 'text-positive'
+    router.push('/users')
+  } else {
+    message.value = store.error || 'Unable to save account.'
+    messageClass.value = 'text-negative'
+  }
 }
 </script>

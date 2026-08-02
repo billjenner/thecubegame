@@ -50,6 +50,9 @@ sb_publishable_vyZoe7uBWvmJkG-QF7vhHA_lLnGxZJD
 Direct Connection String
 postgresql://postgres:[YOUR-PASSWORD]@db.rsmuaiazfzhtyotzfsup.supabase.co:5432/postgres
 
+Iforgot1234!!@@
+Iforgot1234!@#$
+
 # The Cube Game (thecubegame)
 
 The Cube Game

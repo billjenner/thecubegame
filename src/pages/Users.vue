@@ -3,8 +3,16 @@
     <q-card class="q-pa-lg" style="width: min(100%, 560px)">
       <div class="text-h5 text-center q-mb-md">Users</div>
 
+      <div class="text-center q-mb-sm">
+        <q-btn color="negative" label="Load users" @click="loadUsers" />
+      </div>
+
+      <div v-if="store.error" class="text-center text-negative q-mb-sm">
+        {{ store.error }}
+      </div>
+
       <div v-if="!store.users.length" class="text-center text-grey-7">
-        No users yet. Create one from the login page.
+        No users yet. Create one from the login page or click Load users.
       </div>
 
       <q-list v-else bordered separator class="rounded-borders">
@@ -24,7 +32,16 @@
 </template>
 
 <script setup>
+import { onMounted } from 'vue'
 import { useUsersStore } from 'stores/users'
 
 const store = useUsersStore()
+
+function loadUsers() {
+  store.loadUsers()
+}
+
+onMounted(() => {
+  loadUsers()
+})
 </script>

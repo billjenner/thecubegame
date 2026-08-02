@@ -22,7 +22,7 @@
             When you are ready to begin this visualization exercise, continue to the next step.
           </div>
           <q-stepper-navigation>
-            <q-btn @click="step = 2" color="primary" label="Continue" />
+            <q-btn @click="startTest" color="primary" label="Continue" />
           </q-stepper-navigation>
         </q-step>
 
@@ -153,7 +153,7 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn color="primary" label="Finish" @click="finished = true" />
+            <q-btn color="primary" label="Finish" @click="finishTest" />
             <q-btn flat @click="step = 7" color="primary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
@@ -163,13 +163,18 @@
         Thanks! You have completed the cube questionnaire.
       </div>
 
-      <q-btn class="q-mt-md" color="primary" label="Analyze" to="/personality-review" />
+      <q-btn class="q-mt-md" color="primary" label="Analyze" @click="analyzeResults" />
     </div>
   </q-page>
 </template>
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useUsersStore } from 'stores/users'
+
+const router = useRouter()
+const store = useUsersStore()
 
 const step = ref(1)
 const finished = ref(false)
@@ -182,4 +187,19 @@ const answers = ref({
   storm: '',
   flowers: '',
 })
+
+async function startTest() {
+  step.value = 2
+  await store.saveAnswers(answers.value)
+}
+
+async function finishTest() {
+  finished.value = true
+  await store.finishAnswers(answers.value)
+}
+
+async function analyzeResults() {
+  await store.finishAnswers(answers.value)
+  router.push('/personality-review')
+}
 </script>
