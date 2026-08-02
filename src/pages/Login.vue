@@ -33,6 +33,13 @@
           to="/create-login"
           class="full-width q-mt-sm"
         />
+        <q-btn
+          flat
+          color="primary"
+          label="Forgot Password"
+          to="/forgot-password"
+          class="full-width q-mt-sm"
+        />
         <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" />
       </q-form>
 

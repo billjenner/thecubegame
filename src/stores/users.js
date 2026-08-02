@@ -59,6 +59,34 @@ export const useUsersStore = defineStore('Users', {
       return data
     },
 
+    async recoverPassword(email) {
+      this.error = null
+
+      if (!supabase) {
+        this.error = 'Supabase client is not configured.'
+        return null
+      }
+
+      const normalizedEmail = email.trim().toLowerCase()
+      const { data, error } = await supabase
+        .from('users')
+        .select('email, password')
+        .eq('email', normalizedEmail)
+        .maybeSingle()
+
+      if (error) {
+        this.error = error.message
+        return null
+      }
+
+      if (!data) {
+        this.error = 'No account found for that email.'
+        return null
+      }
+
+      return data
+    },
+
     async loadUsers() {
       this.error = null
 
