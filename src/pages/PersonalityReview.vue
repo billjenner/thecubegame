@@ -51,15 +51,19 @@
                           :key="field.key"
                           class="q-pa-sm rounded-borders"
                           :class="
-                            field.key === 'interpretation' ? 'bg-secondary text-white' : 'bg-white'
+                            field.key.includes('explanation')
+                              ? 'bg-secondary text-white'
+                              : 'bg-white'
                           "
                           :style="
-                            field.key === 'interpretation' ? 'margin-top: 8px; padding: 14px;' : ''
+                            field.key.includes('explanation')
+                              ? 'margin-top: 8px; padding: 14px;'
+                              : ''
                           "
                         >
                           <div
                             :class="
-                              field.key === 'interpretation'
+                              field.key.includes('explanation')
                                 ? 'text-caption text-white-7'
                                 : 'text-caption text-grey-7'
                             "
@@ -68,7 +72,7 @@
                           </div>
                           <div
                             class="text-body2 q-mt-xs mt-10"
-                            :class="field.key === 'interpretation' ? 'text-white' : ''"
+                            :class="field.key.includes('explanation') ? 'text-white' : ''"
                             style="white-space: normal; word-break: break-word"
                           >
                             {{ props.row[field.key] || '—' }}
@@ -91,6 +95,7 @@
 import { onMounted, ref } from 'vue'
 import { supabase } from '../lib/supabase'
 import { useUsersStore } from 'stores/users'
+import { generateAnswerExplanation } from '../utils/interpretAnswers'
 
 const store = useUsersStore()
 const rows = ref([])
@@ -104,13 +109,19 @@ const columns = [
 
 const detailFields = [
   { key: 'room', label: 'Room' },
+  { key: 'room_explanation', label: 'Room Explanation' },
   { key: 'cube', label: 'Cube' },
+  { key: 'cube_explanation', label: 'Cube Explanation' },
   { key: 'ladder', label: 'Ladder' },
+  { key: 'ladder_explanation', label: 'Ladder Explanation' },
   { key: 'horse', label: 'Horse' },
+  { key: 'horse_explanation', label: 'Horse Explanation' },
   { key: 'window', label: 'Window' },
+  { key: 'window_explanation', label: 'Window Explanation' },
   { key: 'storm', label: 'Storm' },
+  { key: 'storm_explanation', label: 'Storm Explanation' },
   { key: 'flowers', label: 'Flowers' },
-  { key: 'interpretation', label: 'Interpretation' },
+  { key: 'flowers_explanation', label: 'Flowers Explanation' },
 ]
 
 const expandedRows = ref([])
@@ -144,6 +155,43 @@ function formatDate(value) {
   return `${month}-${day}-${year} ${hours}:${minutes}`
 }
 
+async function ensureExplanations(answer) {
+  const explanations = {}
+  const fields = [
+    ['room', 'room_explanation'],
+    ['cube', 'cube_explanation'],
+    ['ladder', 'ladder_explanation'],
+    ['horse', 'horse_explanation'],
+    ['window', 'window_explanation'],
+    ['storm', 'storm_explanation'],
+    ['flowers', 'flowers_explanation'],
+  ]
+
+  for (const [field, explanationField] of fields) {
+    if (answer[explanationField]) {
+      explanations[field] = answer[explanationField]
+      continue
+    }
+
+    const generatedExplanation = await generateAnswerExplanation({
+      [field]: answer[field] || '',
+    })
+
+    explanations[field] = generatedExplanation[field] || ''
+
+    try {
+      await supabase
+        .from('answers')
+        .update({ [explanationField]: explanations[field] })
+        .eq('email', answer.email)
+    } catch (error) {
+      console.warn(`Unable to persist generated explanation for ${field}.`, error)
+    }
+  }
+
+  return explanations
+}
+
 async function loadAnswers() {
   const { data, error } = await supabase.from('answers').select('*').order('date_time', {
     ascending: false,
@@ -156,19 +204,25 @@ async function loadAnswers() {
   }
 
   const userMap = new Map((store.users || []).map((user) => [user.email?.toLowerCase(), user]))
+  const enrichedRows = []
 
-  rows.value = (data || []).map((answer) => {
+  for (const answer of data || []) {
     const user = userMap.get(answer.email?.toLowerCase()) || {}
-    return {
+    const explanations = await ensureExplanations(answer)
+
+    enrichedRows.push({
       id: `${answer.email}-${answer.date_time}`,
       email: answer.email,
       fname: user.fname || '',
       lname: user.lname || '',
       expand: false,
       ...answer,
+      ...explanations,
       date_time: formatDate(answer.date_time),
-    }
-  })
+    })
+  }
+
+  rows.value = enrichedRows
 }
 
 onMounted(async () => {
