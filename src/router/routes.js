@@ -8,6 +8,8 @@ const routes = [
       { path: 'analyze', component: () => import('pages/PersonalityTest.vue') },
       { path: 'theary', component: () => import('pages/Concept.vue') },
       { path: 'login', component: () => import('pages/Login.vue') },
+      { path: 'create-login', component: () => import('pages/CreateLogin.vue') },
+      { path: 'users', component: () => import('pages/Users.vue') },
     ],
   },
 

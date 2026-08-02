@@ -25,6 +25,15 @@
         />
 
         <q-btn color="negative" label="Log In" type="submit" class="full-width" />
+
+        <q-btn
+          flat
+          color="primary"
+          label="Create Account"
+          to="/create-login"
+          class="full-width q-mt-sm"
+        />
+        <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" />
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">
@@ -36,9 +45,7 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useUsersStore } from 'stores/users'
 
-const store = useUsersStore()
 const email = ref('')
 const password = ref('')
 const message = ref('')
@@ -46,13 +53,9 @@ const messageClass = ref('text-positive')
 
 function handleSubmit() {
   if (!email.value.trim() || !password.value) {
-    message.value = 'Please enter both email and password.'
+    message.value = 'Please enter email, and password'
     messageClass.value = 'text-negative'
     return
   }
-
-  store.saveUser(email.value, password.value)
-  message.value = `Saved login details for ${store.currentUser?.email}`
-  messageClass.value = 'text-positive'
 }
 </script>

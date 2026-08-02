@@ -6,57 +6,35 @@
       class="row q-col-gutter-md"
       style="background-color: #fdecec; padding-bottom: 16px; padding-right: 16px"
     >
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
+          <q-expansion-item
+            expand-icon="keyboard_arrow_down"
+            expanded-icon="keyboard_arrow_up"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+          >
+            <template v-slot:header>
+              <q-chip>Room</q-chip>
+            </template>
+
+            <q-card-section>
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Your Inner World and How You Perceive Yourself.
+              </p>
+              <br />
+              Reflects the landscape within you—the way you see yourself, understand your place in
+              the world, and experience the life unfolding around you.
+            </q-card-section>
+          </q-expansion-item>
           <q-card-section>
             <img src="/Room.jpg" alt="Cube" style="max-width: 100%; height: auto; display: block" />
           </q-card-section>
-
-          <q-expansion-item
-            expand-icon="keyboard_arrow_down"
-            expanded-icon="keyboard_arrow_up"
-            transition-show="jump-down"
-            transition-hide="jump-up"
-          >
-            <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Room</div>
-            </template>
-
-            <q-card-section>
-              <p>
-                In the version of The Cube Test that Neal Strauss uses, the room (or, in many other
-                versions, the desert) represents your world or your personal universe—the
-                environment in which you perceive yourself to exist. It is the backdrop against
-                which every other symbol is interpreted.
-              </p>
-              <p>
-                Specifically, the room's characteristics are commonly interpreted as follows: Size
-                of the room – How expansive or limited you perceive your life and opportunities to
-                be. A large room suggests you see your world as full of possibilities. A small room
-                can suggest you perceive your world as more constrained or intimate. Brightness –
-                Your outlook on life. Bright, open rooms often symbolize optimism. Dark or dim rooms
-                may reflect uncertainty, caution, or feeling limited. Walls, windows, and doors –
-                How open or closed you feel your world is. Many windows or open doors can symbolize
-                openness to new experiences. Solid walls with few openings may symbolize privacy,
-                security, or feeling boxed in. Condition of the room – How you currently experience
-                your life. Clean and orderly may represent feeling in control. Cluttered or damaged
-                may reflect feeling overwhelmed or that life is chaotic. The room itself is not
-                usually the primary focus of the test. It serves as the context for the other
-                objects: Cube = You / your self-image. Ladder = Your goals or ambitions. Horse =
-                Your ideal partner or significant relationship. Flowers = Friends and family. Storm
-                = Problems, stress, or challenges.
-              </p>
-            </q-card-section>
-          </q-expansion-item>
         </q-card>
       </div>
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
-          <q-card-section>
-            <img src="/Cube.jpg" alt="Cube" style="max-width: 100%; height: auto; display: block" />
-          </q-card-section>
-
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -64,26 +42,48 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Cube</div>
+              <q-chip>Cube</q-chip>
             </template>
 
             <q-card-section>
-              If the cube you've envisioned is large, you're likely a very confident person. If it's
-              small, you're most likely shy and modest.<br />
-              If the cube is dug into the ground, it means you are a planner that thinks far into
-              the future. If the cube is sitting on top of the ground, that means you're a very
-              businesslike thinker.<br />
-              A cube that is moving signifies that you are someone who thinks out of the box and
-              avoids convention.
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Your Sense of Self and Identity.
+              </p>
+              <br />
+              The cube symbolizes the inner image you carry of yourself—the shape of your identity,
+              the strength of your confidence, the presence you project, and the reflection of who
+              you believe you are in the eyes of others.
             </q-card-section>
           </q-expansion-item>
+          <q-card-section>
+            <img src="/Cube.jpg" alt="Cube" style="max-width: 100%; height: auto; display: block" />
+          </q-card-section>
         </q-card>
       </div>
 
       <!-- Watermelon -->
 
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
+          <q-expansion-item
+            expand-icon="keyboard_arrow_down"
+            expanded-icon="keyboard_arrow_up"
+            transition-show="jump-down"
+            transition-hide="jump-up"
+          >
+            <template v-slot:header>
+              <q-chip>Ladder</q-chip>
+            </template>
+            <q-card-section>
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Your Goals, Ambitions, and Personal Growth.
+              </p>
+              <br />
+              The ladder symbolizes the journey upward—the aspirations that call you higher, the
+              steps you take toward becoming who you wish to be, and the effort, courage, and
+              persistence required to reach each new height.
+            </q-card-section>
+          </q-expansion-item>
           <q-card-section>
             <img
               src="/Ladder.jpg"
@@ -91,6 +91,13 @@
               style="max-width: 100%; height: auto; display: block"
             />
           </q-card-section>
+        </q-card>
+      </div>
+
+      <!-- Grapes -->
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -98,26 +105,18 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Ladder</div>
+              <q-chip>Horse</q-chip>
             </template>
             <q-card-section>
-              If you've envisioned the ladder touching the cube, this means you're very connected to
-              your friends and rely on them for support. If the ladder is detached, this means you
-              prefer to be independent.<br />
-              If the ladder is below the cube, your friends see you as an authority figure. If the
-              cube is on the same level, you and your friends are equals. If the ladder is above the
-              cube, this means you see your friends as authority figures in your life.<br />
-              If the ladder is short, this means you prefer keeping a small circle of friends. If
-              it's a long ladder, you're an extrovert with many friends and acquaintances.
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Your Soulmate, Romantic Partner, and Intimate Relationships.
+              </p>
+              <br />
+              The horse symbolizes the spirit of partnership—the qualities you are drawn to in
+              another, the freedom and trust you share in intimate connection, and the depth of
+              love, companionship, and devotion you hope to experience.
             </q-card-section>
           </q-expansion-item>
-        </q-card>
-      </div>
-
-      <!-- Grapes -->
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
           <q-card-section>
             <img
               src="/Horse.jpg"
@@ -125,6 +124,13 @@
               style="max-width: 100%; height: auto; display: block"
             />
           </q-card-section>
+        </q-card>
+      </div>
+
+      <!-- Kiwi -->
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -132,24 +138,18 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Horse</div>
+              <q-chip>Storm</q-chip>
             </template>
             <q-card-section>
-              If the horse you imagined is a strong workhorse, that means your ideal partner is
-              hardworking and reliable. If you've imagined a more delicate horse, that means your
-              ideal partner is likely someone who takes pride in his or her appearance and enjoys
-              being pampered.<br />
-              If the horse is far away from the cube or moving in the opposite direction, this means
-              you're distant from your present partner or far from attaining your ideal one.
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Challenges, Stress, and Emotional Turbulence.
+              </p>
+              <br />
+              The storm symbolizes the trials that move through your life—the uncertainty, conflict,
+              pressure, and emotional turbulence you encounter, and the way you respond when life
+              becomes difficult or overwhelming.
             </q-card-section>
           </q-expansion-item>
-        </q-card>
-      </div>
-
-      <!-- Kiwi -->
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
           <q-card-section>
             <img
               src="/Storm.jpg"
@@ -157,6 +157,11 @@
               style="max-width: 100%; height: auto; display: block"
             />
           </q-card-section>
+        </q-card>
+      </div>
+
+      <div class="col-12 col-sm-6 col-md-4 col-lg-4 flex justify-center">
+        <q-card style="width: 60%">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -164,22 +169,18 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Storm</div>
+              <q-chip>Flowers</q-chip>
             </template>
             <q-card-section>
-              The storm represents difficulties, uncertainty, and emotional challenges in your life.
-              Its size, intensity, and location reveal how you perceive obstacles, while your
-              reaction to it reflects your coping style, resilience, and emotional response to
-              adversity.
+              <p class="text-center text-weight-bold q-mb-sm" style="font-size: 1.05rem">
+                Friends, Friendship, and Social Connections
+              </p>
+              <br />
+              The flowers symbolize the people who bring color and meaning to your life—the
+              friendships you nurture, the connections you cultivate, and the ways you give and
+              receive companionship, trust, and belonging.
             </q-card-section>
           </q-expansion-item>
-        </q-card>
-      </div>
-
-      <!-- Apples -->
-
-      <div class="col-12 col-sm-6 col-md-4 col-lg-4">
-        <q-card>
           <q-card-section>
             <img
               src="/Flowers.jpg"
@@ -187,23 +188,6 @@
               style="max-width: 100%; height: auto; display: block"
             />
           </q-card-section>
-          <q-expansion-item
-            expand-icon="keyboard_arrow_down"
-            expanded-icon="keyboard_arrow_up"
-            transition-show="jump-down"
-            transition-hide="jump-up"
-          >
-            <template v-slot:header>
-              <div class="text-h6 text-weight-bold">Flowers</div>
-            </template>
-            <q-card-section>
-              The number of flowers you imagined represent the number of children you would like to
-              have. If the flowers are close to the cube, it means you desire a close relationship
-              with your kids – or already have one.<br />
-              If the flowers are far from the cube, this means you do not value having a close
-              relationship with your kids.
-            </q-card-section>
-          </q-expansion-item>
         </q-card>
       </div>
     </div>
@@ -211,20 +195,22 @@
       class="row q-col-gutter-md"
       style="background-color: #e96b67; margin-top: 4px; padding-right: 16px; padding-bottom: 24px"
     >
-      <div class="col-12 col-md-6">
-        <q-card flat bordered style="width: 60%; max-width: 60%; margin: 0 auto">
+      <div class="col-12 col-md-4">
+        <q-card flat bordered style="width: 90%; max-width: 90%; margin: 0 auto">
           <q-card-section>
-            <p>
-              Room → Your inner environment Cube → Your identity Ladder → Your ambitions Horse →
-              Your relationships and desires Window → Your view of the world Storm → How you handle
-              adversity Flowers → What you nurture and value
-            </p>
+            <p>Room → Your inner environment</p>
+            <p>Cube → Your identity</p>
+            <p>Ladder → Your ambitions</p>
+            <p>Horse → Your relationships and desires</p>
+            <p>Window → Your view of the world</p>
+            <p>Storm → How you handle adversity</p>
+            <p>Flowers → What you nurture and value</p>
           </q-card-section>
         </q-card>
       </div>
 
-      <div class="col-12 col-md-6">
-        <q-card flat bordered style="width: 60%; max-width: 60%; margin: 0 auto">
+      <div class="col-12 col-md-4">
+        <q-card flat bordered style="width: 90%; max-width: 90%; margin: 0 auto">
           <q-expansion-item
             expand-icon="keyboard_arrow_down"
             expanded-icon="keyboard_arrow_up"
@@ -232,7 +218,7 @@
             transition-hide="jump-up"
           >
             <template v-slot:header>
-              <div class="text-subtitle1 text-weight-bold">Related Resources</div>
+              <q-chip>Related Resources</q-chip>
             </template>
             <q-card-section>
               <div class="text-weight-bold">Teal Swan Article</div>
@@ -268,10 +254,10 @@
           </q-expansion-item>
         </q-card>
       </div>
-      <div class="col-12 col-md-6">
-        <q-card style="width: 60%; max-width: 60%; margin: 0 auto">
+      <div class="col-12 col-md-4">
+        <q-card style="width: 90%; max-width: 90%; margin: 0 auto">
           <q-card-section>
-            <div class="text-h6 text-weight-bold">The Cube</div>
+            <q-chip>The Cube</q-chip>
           </q-card-section>
           <div style="width: 100%; max-width: 100%">
             <q-video

@@ -1,0 +1,80 @@
+<template>
+  <q-page class="flex flex-center q-pa-md">
+    <q-card class="q-pa-lg" style="width: min(100%, 460px)">
+      <div class="text-h5 text-center q-mb-md">Create Account</div>
+
+      <q-form @submit.prevent="handleSubmit" class="q-gutter-md">
+        <q-input
+          v-model="fname"
+          label="First Name"
+          outlined
+          dense
+          :rules="[(val) => !!val || 'First name is required']"
+        />
+
+        <q-input
+          v-model="lname"
+          label="Last Name"
+          outlined
+          dense
+          :rules="[(val) => !!val || 'Last name is required']"
+        />
+
+        <q-input
+          v-model="email"
+          label="Email"
+          type="email"
+          outlined
+          dense
+          autocomplete="email"
+          :rules="[(val) => !!val || 'Email is required']"
+        />
+
+        <q-input
+          v-model="password"
+          label="Password"
+          type="password"
+          outlined
+          dense
+          autocomplete="new-password"
+          :rules="[(val) => !!val || 'Password is required']"
+        />
+
+        <q-btn color="negative" label="Create Login" type="submit" class="full-width" />
+      </q-form>
+
+      <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">
+        {{ message }}
+      </div>
+    </q-card>
+  </q-page>
+</template>
+
+<script setup>
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useUsersStore } from 'stores/users'
+
+const router = useRouter()
+const store = useUsersStore()
+
+const fname = ref('')
+const lname = ref('')
+const email = ref('')
+const password = ref('')
+const message = ref('')
+const messageClass = ref('text-positive')
+
+function handleSubmit() {
+  if (!fname.value.trim() || !lname.value.trim() || !email.value.trim() || !password.value) {
+    message.value = 'Please enter first name, last name, email, and password.'
+    messageClass.value = 'text-negative'
+    return
+  }
+
+  store.saveUser(email.value, password.value, fname.value, lname.value)
+  message.value = `Account created for ${store.currentUser?.email}`
+  messageClass.value = 'text-positive'
+  router.push('/users')
+}
+</script>

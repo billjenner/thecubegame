@@ -7,17 +7,21 @@ export const useUsersStore = defineStore('Users', {
   }),
 
   actions: {
-    saveUser(email, password) {
+    saveUser(email, password, fname = '', lname = '') {
       const normalizedEmail = email.trim().toLowerCase()
       const user = {
         email: normalizedEmail,
         password,
+        fname,
+        lname,
       }
 
       const existingUser = this.users.find((account) => account.email === normalizedEmail)
 
       if (existingUser) {
         existingUser.password = password
+        existingUser.fname = fname
+        existingUser.lname = lname
         this.currentUser = existingUser
         return
       }

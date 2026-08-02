@@ -1,3 +1,55 @@
+## Supabase SQL
+
+### Create Cube Project
+
+#### Create Schema
+
+create table if not exists public.users (
+id uuid primary key default gen_random_uuid(),
+email text unique not null,
+password text not null,
+fname text not null default '',
+lname text not null default '',
+created_at timestamptz not null default now()
+);
+
+alter table public.users enable row level security;
+
+create policy "allow inserts" on public.users
+for insert to public
+with check (true);
+
+create policy "allow reads" on public.users
+for select to public
+using (true);
+
+#### Install the client
+
+npm install @supabase/supabase-js
+
+#### Reference Supabase
+
+In file: src/lib/supabase.js
+
+import { createClient } from '@supabase/supabase-js'
+
+export const supabase = createClient(
+import.meta.env.VITE_SUPABASE_URL,
+import.meta.env.VITE_SUPABASE_ANON_KEY
+)
+
+#### Environment variables
+
+VITE_SUPABASE_URL=your-project-url
+VITE_SUPABASE_ANON_KEY=your-anon-key
+
+Project URL
+https://rsmuaiazfzhtyotzfsup.supabase.co
+Publish Key
+sb_publishable_vyZoe7uBWvmJkG-QF7vhHA_lLnGxZJD
+Direct Connection String
+postgresql://postgres:[YOUR-PASSWORD]@db.rsmuaiazfzhtyotzfsup.supabase.co:5432/postgres
+
 # The Cube Game (thecubegame)
 
 The Cube Game

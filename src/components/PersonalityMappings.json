@@ -410,5 +410,267 @@
         }
       }
     }
+  },
+
+  "Flowers": {
+    "symbol": "Friends, friendships, and social connections",
+    "features": {
+      "overall": {
+        "symbolicMeaning": "Friendships and social relationships",
+        "interpretation": "The flowers represent the people you care about, the friendships you cultivate, and how you experience connection, belonging, and mutual support."
+      },
+
+      "location": {
+        "insideRoom": {
+          "symbolicMeaning": "Friendships as part of your inner world",
+          "interpretation": "You may see close friendships as an important part of who you are and an essential part of your emotional life."
+        },
+        "outsideRoom": {
+          "symbolicMeaning": "Friendships connected to the broader world",
+          "interpretation": "You may view friendships as experiences that expand beyond yourself through community, activities, and shared interests."
+        }
+      },
+
+      "distanceFromCube": {
+        "close": {
+          "symbolicMeaning": "Friendships closely connected to identity",
+          "interpretation": "Your friendships may strongly influence who you are, your values, and how you see yourself."
+        },
+        "far": {
+          "symbolicMeaning": "Independence within friendships",
+          "interpretation": "You may value friendships while maintaining a strong sense of individuality and personal space."
+        },
+        "touching": {
+          "symbolicMeaning": "Deep emotional connection",
+          "interpretation": "You may experience close friendships as an important part of your identity and emotional support system."
+        }
+      },
+
+      "distanceFromRoom": {
+        "near": {
+          "symbolicMeaning": "Accessible and active relationships",
+          "interpretation": "You may prefer friendships that are present, available, and actively involved in your daily life."
+        },
+        "far": {
+          "symbolicMeaning": "Independent or distant relationships",
+          "interpretation": "You may maintain friendships across distance or value relationships that allow significant independence."
+        }
+      },
+
+      "number": {
+        "many": {
+          "symbolicMeaning": "Broad social network",
+          "interpretation": "You may enjoy having many connections and appreciate different perspectives and personalities."
+        },
+        "few": {
+          "symbolicMeaning": "Close and selective friendships",
+          "interpretation": "You may prefer a smaller number of meaningful relationships built on trust and depth."
+        },
+        "one": {
+          "symbolicMeaning": "A highly valued relationship",
+          "interpretation": "You may place great importance on one especially meaningful friendship or connection."
+        }
+      },
+
+      "type": {
+        "roses": {
+          "symbolicMeaning": "Deep affection and appreciation",
+          "interpretation": "You may value friendships built around loyalty, admiration, and emotional connection."
+        },
+        "wildflowers": {
+          "symbolicMeaning": "Spontaneity and individuality",
+          "interpretation": "You may appreciate friendships with unique, independent people who bring variety into your life."
+        },
+        "sunflowers": {
+          "symbolicMeaning": "Optimism and encouragement",
+          "interpretation": "You may value friends who bring happiness, positivity, and motivation."
+        },
+        "lilies": {
+          "symbolicMeaning": "Peace and emotional support",
+          "interpretation": "You may seek friendships that provide calmness, trust, and emotional stability."
+        },
+        "orchids": {
+          "symbolicMeaning": "Uniqueness and sophistication",
+          "interpretation": "You may value friendships with people who are distinctive, creative, or intellectually stimulating."
+        },
+        "daisies": {
+          "symbolicMeaning": "Simplicity and genuine connection",
+          "interpretation": "You may appreciate friendships that feel natural, honest, and uncomplicated."
+        }
+      },
+
+      "color": {
+        "red": {
+          "symbolicMeaning": "Passion, loyalty, and strong emotional bonds",
+          "interpretation": "You may value friendships that are deeply connected, loyal, protective, and emotionally expressive."
+        },
+        "pink": {
+          "symbolicMeaning": "Affection, kindness, and compassion",
+          "interpretation": "You may appreciate friends who are caring, gentle, understanding, and emotionally supportive."
+        },
+        "white": {
+          "symbolicMeaning": "Trust, honesty, and sincerity",
+          "interpretation": "You may seek friendships based on authenticity, acceptance, and peaceful connection."
+        },
+        "yellow": {
+          "symbolicMeaning": "Joy, optimism, and companionship",
+          "interpretation": "You may value friendships that bring laughter, happiness, encouragement, and positive energy."
+        },
+        "orange": {
+          "symbolicMeaning": "Adventure, enthusiasm, and creativity",
+          "interpretation": "You may enjoy friendships that inspire exploration, excitement, and shared experiences."
+        },
+        "blue": {
+          "symbolicMeaning": "Trust, loyalty, and emotional calm",
+          "interpretation": "You may value dependable friendships that provide stability, comfort, and a sense of security."
+        },
+        "purple": {
+          "symbolicMeaning": "Depth, uniqueness, and imagination",
+          "interpretation": "You may be drawn to friendships with people who are creative, thoughtful, and emotionally complex."
+        },
+        "lavender": {
+          "symbolicMeaning": "Gentleness, sensitivity, and peace",
+          "interpretation": "You may appreciate friendships that feel calming, accepting, and emotionally safe."
+        },
+        "green": {
+          "symbolicMeaning": "Growth, healing, and harmony",
+          "interpretation": "You may value friendships that encourage personal growth and positive change."
+        },
+        "black": {
+          "symbolicMeaning": "Depth, mystery, and transformation",
+          "interpretation": "You may value friendships with people who have depth, resilience, and unique life experiences."
+        },
+        "brown": {
+          "symbolicMeaning": "Reliability and grounding",
+          "interpretation": "You may seek dependable friendships built on loyalty, stability, and practical support."
+        },
+        "multicolor": {
+          "symbolicMeaning": "Diversity and variety",
+          "interpretation": "You may appreciate having friendships with many different personalities, backgrounds, and perspectives."
+        }
+      },
+
+      "size": {
+        "large": {
+          "symbolicMeaning": "Strong influence of friendships",
+          "interpretation": "Friendships may play a major role in your happiness, identity, and emotional well-being."
+        },
+        "small": {
+          "symbolicMeaning": "Private or subtle connections",
+          "interpretation": "You may value friendships that are meaningful but not necessarily central to your public life."
+        }
+      },
+
+      "arrangement": {
+        "organized": {
+          "symbolicMeaning": "Intentional relationships",
+          "interpretation": "You may carefully maintain friendships and value harmony, balance, and connection."
+        },
+        "wild": {
+          "symbolicMeaning": "Spontaneous relationships",
+          "interpretation": "You may enjoy friendships that are unpredictable, diverse, and naturally developing."
+        },
+        "scattered": {
+          "symbolicMeaning": "Independent connections",
+          "interpretation": "Your friendships may come from many areas of life without needing to be closely connected."
+        }
+      },
+
+      "container": {
+        "vase": {
+          "symbolicMeaning": "Maintained and intentional friendships",
+          "interpretation": "You may actively invest effort into preserving and nurturing important relationships."
+        },
+        "ground": {
+          "symbolicMeaning": "Natural and lasting friendships",
+          "interpretation": "You may value friendships that grow naturally through shared experiences and time."
+        },
+        "garden": {
+          "symbolicMeaning": "Community and belonging",
+          "interpretation": "You may value being part of a supportive group or social environment."
+        }
+      },
+
+      "strength": {
+        "hardy": {
+          "symbolicMeaning": "Reliable and resilient friendships",
+          "interpretation": "You may value friends who remain supportive through challenges and difficult times."
+        },
+        "fragile": {
+          "symbolicMeaning": "Sensitive relationships",
+          "interpretation": "You may recognize that friendships require care, attention, and emotional consideration."
+        }
+      },
+
+      "condition": {
+        "healthy": {
+          "symbolicMeaning": "Strong and fulfilling relationships",
+          "interpretation": "You may feel satisfied with your friendships and experience mutual support."
+        },
+        "damaged": {
+          "symbolicMeaning": "Relationship difficulties",
+          "interpretation": "You may have concerns about conflict, distance, or friendships needing repair."
+        }
+      },
+
+      "lifeState": {
+        "alive": {
+          "symbolicMeaning": "Active and meaningful friendships",
+          "interpretation": "You may experience your friendships as growing, supportive, and emotionally rewarding."
+        },
+        "dead": {
+          "symbolicMeaning": "Past relationships or emotional endings",
+          "interpretation": "You may be reflecting on friendships that have changed, ended, or remain as memories."
+        }
+      },
+
+      "careRequired": {
+        "needsCare": {
+          "symbolicMeaning": "Relationship maintenance",
+          "interpretation": "You recognize that friendships require communication, effort, and emotional investment."
+        },
+        "thriving": {
+          "symbolicMeaning": "Healthy connection",
+          "interpretation": "You may feel your friendships are naturally supported and mutually rewarding."
+        }
+      },
+
+      "yourFeelings": {
+        "positive": {
+          "symbolicMeaning": "Appreciation and connection",
+          "interpretation": "You likely experience friendships as sources of happiness, support, and belonging."
+        },
+        "negative": {
+          "symbolicMeaning": "Distance or unresolved emotions",
+          "interpretation": "You may have concerns, disappointments, or unmet needs within friendships."
+        }
+      },
+
+      "howFlowersFeelAboutYou": {
+        "thrivingNearYou": {
+          "symbolicMeaning": "Mutual appreciation",
+          "interpretation": "You may feel valued, accepted, and appreciated by your friends."
+        },
+        "neglected": {
+          "symbolicMeaning": "Concerns about reciprocity",
+          "interpretation": "You may question whether friendships receive equal care and attention."
+        }
+      },
+
+      "yourRole": {
+        "protecting": {
+          "symbolicMeaning": "Nurturing relationships",
+          "interpretation": "You may see yourself as someone who protects and supports the people you care about."
+        },
+        "caring": {
+          "symbolicMeaning": "Investment and commitment",
+          "interpretation": "You likely place importance on maintaining and strengthening friendships."
+        },
+        "ignoring": {
+          "symbolicMeaning": "Independence or emotional distance",
+          "interpretation": "You may prefer more personal space or may currently have limited emotional availability."
+        }
+      }
+    }
   }
 }
