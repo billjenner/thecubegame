@@ -22,7 +22,7 @@
             When you are ready to begin this visualization exercise, continue to the next step.
           </div>
           <q-stepper-navigation>
-            <q-btn @click="startTest" color="primary" label="Continue" />
+            <q-btn @click="startTest" color="secondary" label="Continue" />
           </q-stepper-navigation>
         </q-step>
 
@@ -34,12 +34,12 @@
           </div>
           <q-input v-model="answers.room" type="textarea" outlined autogrow label="Your response" />
           <q-stepper-navigation>
-            <q-btn @click="step = 3" color="primary" label="Continue" />
-            <q-btn flat @click="step = 1" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 3" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 1" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
-        <q-step :name="3" title="2. Cube" :done="step > 4">
+        <q-step :name="3" title="2. Cube" :done="step > 3">
           <div class="text-body1 q-mb-sm">
             Place in the room a cube. Where is the cube in the room - how far away from you is it?
             Is the cube on the ground or floating in the air? When you look at the cube are you
@@ -49,12 +49,12 @@
           </div>
           <q-input v-model="answers.cube" type="textarea" outlined autogrow label="Your response" />
           <q-stepper-navigation>
-            <q-btn @click="step = 4" color="primary" label="Continue" />
-            <q-btn flat @click="step = 2" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 4" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 2" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
-        <q-step :name="4" title="3. Ladder" :done="step > 5">
+        <q-step :name="4" title="3. Ladder" :done="step > 4">
           <div class="text-body1 q-mb-sm">
             Place in the room a ladder. Continue to visualize it until you notice the details. Where
             is the ladder in relation to the room and the cube? Is the ladder leaning against
@@ -69,12 +69,12 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 5" color="primary" label="Continue" />
-            <q-btn flat @click="step = 3" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 5" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 3" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
-        <q-step :name="5" title="4. Horse" :done="step > 6">
+        <q-step :name="5" title="4. Horse" :done="step > 5">
           <div class="text-body1 q-mb-sm">
             Now place in the room a horse. Continue to visualize it until you notice the details.
             Where is the horse - What is the distance between the cube and the horse? Where is the
@@ -90,12 +90,12 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 6" color="primary" label="Continue" />
-            <q-btn flat @click="step = 4" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 6" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 4" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
-        <q-step :name="6" title="5. Window" :done="step > 7">
+        <q-step :name="6" title="5. Window" :done="step > 6">
           <div class="text-body1 q-mb-sm">
             Now imagine a window in the room. Describe the overall window condition of the window
             (clear, dirty, broken, covered), presents of window? Size of the window? Can you see
@@ -111,8 +111,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 7" color="primary" label="Continue" />
-            <q-btn flat @click="step = 5" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 7" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 5" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -131,8 +131,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 8" color="primary" label="Continue" />
-            <q-btn flat @click="step = 6" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 8" color="secondary" label="Continue" />
+            <q-btn flat @click="step = 6" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -153,8 +153,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn color="primary" label="Finish" @click="finishTest" />
-            <q-btn flat @click="step = 7" color="primary" label="Back" class="q-ml-sm" />
+            <q-btn color="secondary" label="Finish" @click="finishTest" />
+            <q-btn flat @click="step = 7" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
       </q-stepper>
@@ -163,7 +163,11 @@
         Thanks! You have completed the cube questionnaire.
       </div>
 
-      <q-btn class="q-mt-md" color="primary" label="Analyze" @click="analyzeResults" />
+      <div v-if="errorMessage" class="q-mt-md text-negative">
+        {{ errorMessage }}
+      </div>
+
+      <q-btn class="q-mt-md" color="accent" label="Analyze" @click="analyzeResults" />
     </div>
   </q-page>
 </template>
@@ -178,6 +182,7 @@ const store = useUsersStore()
 
 const step = ref(1)
 const finished = ref(false)
+const errorMessage = ref('')
 const answers = ref({
   room: '',
   cube: '',
@@ -199,6 +204,16 @@ async function finishTest() {
 }
 
 async function analyzeResults() {
+  const requiredKeys = ['room', 'cube', 'ladder', 'horse', 'window', 'storm', 'flowers']
+  const missingAnswers = requiredKeys.filter((key) => !String(answers.value[key] ?? '').trim())
+
+  if (missingAnswers.length) {
+    const labels = missingAnswers.map((key) => key.charAt(0).toUpperCase() + key.slice(1))
+    errorMessage.value = `Answers incomplete. Please complete: ${labels.join(', ')}.`
+    return
+  }
+
+  errorMessage.value = ''
   await store.finishAnswers(answers.value)
   router.push('/personality-review')
 }
