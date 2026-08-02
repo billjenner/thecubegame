@@ -27,8 +27,20 @@
         <q-btn color="negative" label="Log In" type="submit" class="full-width" />
 
         <div class="row q-col-gutter-sm q-mt-sm">
-          <q-btn flat color="accent" label="Create User" to="/create-login" class="col" />
-          <q-btn flat color="accent" label="Forgot Password" to="/forgot-password" class="col" />
+          <q-btn
+            flat
+            color="accent"
+            label="Create User"
+            to="/create-login"
+            class="col text-caption"
+          />
+          <q-btn
+            flat
+            color="accent"
+            label="Forgot Password"
+            to="/forgot-password"
+            class="col text-caption"
+          />
         </div>
         <!-- <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" /> -->
       </q-form>
