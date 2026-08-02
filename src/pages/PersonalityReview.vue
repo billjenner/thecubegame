@@ -31,7 +31,7 @@
                   />
                 </q-td>
                 <q-td
-                  v-for="col in props.cols"
+                  v-for="col in props.cols.filter((col) => col.name !== 'expand')"
                   :key="col.name"
                   :props="props"
                   class="wrap-content"
