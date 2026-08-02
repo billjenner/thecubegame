@@ -28,7 +28,6 @@
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUsersStore } from 'stores/users'
-import { Resend } from 'resend'
 
 const router = useRouter()
 const store = useUsersStore()
@@ -37,7 +36,8 @@ const email = ref('')
 const message = ref('')
 const messageClass = ref('text-positive')
 
-const resend = new Resend(import.meta.env.VITE_RESEND_API_KEY)
+const formSubmitUrl =
+  import.meta.env.VITE_FORMSUBMIT_URL || `https://formsubmit.co/bill.jenner@gmail.com`
 
 async function handleSubmit() {
   if (!email.value.trim()) {
@@ -46,26 +46,38 @@ async function handleSubmit() {
     return
   }
 
-  const result = await store.recoverPassword(email.value)
+  try {
+    const result = await store.recoverPassword(email.value)
 
-  if (result) {
-    try {
-      await resend.emails.send({
-        from: 'onboarding@resend.dev',
-        to: result.email,
-        subject: 'Your Cube Game password',
-        html: `<p>Hello,</p><p>Your password for The Cube Game is: <strong>${result.password}</strong></p><p>Please keep this information safe.</p>`,
-      })
-
-      message.value = `Your password was sent to ${result.email}`
-      messageClass.value = 'text-positive'
-      setTimeout(() => router.push('/login'), 1500)
-    } catch {
-      message.value = 'Unable to send password email right now.'
-      messageClass.value = 'text-negative'
+    if (!result) {
+      throw new Error(store.error || 'No account found for that email.')
     }
-  } else {
-    message.value = store.error || 'Unable to recover password.'
+
+    const response = await fetch(formSubmitUrl, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        email: result.email,
+        password: result.password,
+        _subject: 'Your Cube Game password',
+        _captcha: 'false',
+      }),
+    })
+
+    if (!response.ok) {
+      throw new Error('Unable to send password email right now.')
+    }
+
+    message.value = `Your password was sent to ${result.email}`
+    messageClass.value = 'text-positive'
+    setTimeout(() => router.push('/login'), 3000)
+  } catch (error) {
+    console.error('Forgot password email failed:', error)
+    const errorMessage = error?.message || 'Unknown error'
+    message.value = `Unable to send password email right now: ${errorMessage}`
     messageClass.value = 'text-negative'
   }
 }

@@ -17,6 +17,10 @@
   "dependencies": {
     "@quasar/extras": "^1.16.4",
     "@supabase/supabase-js": "^2.111.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
+    "nodemailer": "^9.0.3",
     "pinia": "^3.0.1",
     "quasar": "^2.16.0",
     "resend": "^6.18.1",
