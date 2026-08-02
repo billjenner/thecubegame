@@ -87,6 +87,7 @@ export const useUsersStore = defineStore('Users', {
         window: answers.window || '',
         storm: answers.storm || '',
         flowers: answers.flowers || '',
+        interpretation: answers.interpretation || '',
         date_time: currentTime,
       }
 
@@ -129,6 +130,7 @@ export const useUsersStore = defineStore('Users', {
         window: answers.window || '',
         storm: answers.storm || '',
         flowers: answers.flowers || '',
+        interpretation: answers.interpretation || '',
         date_time: currentTime,
       }
 
