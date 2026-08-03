@@ -260,7 +260,20 @@ export const useUsersStore = defineStore('Users', {
         error = updateResult.error
       }
 
-      if (!data && !error) {
+      if (!data && !error && this.activeAnswerDateTime) {
+        // Fallback update for schemas where date_time comparison may not match exactly.
+        const updateByEmailResult = await supabase
+          .from('answers')
+          .update(payload)
+          .eq('email', this.currentUser.email)
+          .select()
+          .maybeSingle()
+
+        data = updateByEmailResult.data
+        error = updateByEmailResult.error
+      }
+
+      if (!data && !error && !this.activeAnswerDateTime) {
         const insertResult = await supabase.from('answers').insert(payload).select().single()
         data = insertResult.data
         error = insertResult.error
