@@ -53,6 +53,10 @@ postgresql://postgres:[YOUR-PASSWORD]@db.rsmuaiazfzhtyotzfsup.supabase.co:5432/p
 Iforgot1234!!@@
 Iforgot1234!@#$
 
+### Email functionality
+
+https://formsubmit.co/
+
 # The Cube Game (thecubegame)
 
 The Cube Game

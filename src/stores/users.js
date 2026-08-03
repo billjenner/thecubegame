@@ -23,26 +23,6 @@ function buildAnswerPayload(email, answers, explanations, currentTime) {
   }
 }
 
-function buildLegacyAnswerPayload(email, answers, explanations, currentTime) {
-  const combinedInterpretation = Object.entries(explanations)
-    .filter(([, value]) => Boolean(value))
-    .map(([key, value]) => `${key}: ${value}`)
-    .join(' | ')
-
-  return {
-    email,
-    room: answers.room || '',
-    cube: answers.cube || '',
-    ladder: answers.ladder || '',
-    horse: answers.horse || '',
-    window: answers.window || '',
-    storm: answers.storm || '',
-    flowers: answers.flowers || '',
-    interpretation: combinedInterpretation,
-    date_time: currentTime,
-  }
-}
-
 export const useUsersStore = defineStore('Users', {
   state: () => ({
     users: [],
@@ -165,24 +145,7 @@ export const useUsersStore = defineStore('Users', {
 
       const currentTime = new Date().toISOString()
       const explanations = await generateAnswerExplanation(answers)
-      const payload = {
-        email: this.currentUser.email,
-        room: answers.room || '',
-        room_explanation: explanations.room || '',
-        cube: answers.cube || '',
-        cube_explanation: explanations.cube || '',
-        ladder: answers.ladder || '',
-        ladder_explanation: explanations.ladder || '',
-        horse: answers.horse || '',
-        horse_explanation: explanations.horse || '',
-        window: answers.window || '',
-        window_explanation: explanations.window || '',
-        storm: answers.storm || '',
-        storm_explanation: explanations.storm || '',
-        flowers: answers.flowers || '',
-        flowers_explanation: explanations.flowers || '',
-        date_time: currentTime,
-      }
+      const payload = buildAnswerPayload(this.currentUser.email, answers, explanations, currentTime)
 
       const { data, error } = await supabase
         .from('answers')
@@ -215,24 +178,7 @@ export const useUsersStore = defineStore('Users', {
 
       const currentTime = new Date().toISOString()
       const explanations = await generateAnswerExplanation(answers)
-      const payload = {
-        email: this.currentUser.email,
-        room: answers.room || '',
-        room_explanation: explanations.room || '',
-        cube: answers.cube || '',
-        cube_explanation: explanations.cube || '',
-        ladder: answers.ladder || '',
-        ladder_explanation: explanations.ladder || '',
-        horse: answers.horse || '',
-        horse_explanation: explanations.horse || '',
-        window: answers.window || '',
-        window_explanation: explanations.window || '',
-        storm: answers.storm || '',
-        storm_explanation: explanations.storm || '',
-        flowers: answers.flowers || '',
-        flowers_explanation: explanations.flowers || '',
-        date_time: currentTime,
-      }
+      const payload = buildAnswerPayload(this.currentUser.email, answers, explanations, currentTime)
 
       const { data, error } = await supabase
         .from('answers')

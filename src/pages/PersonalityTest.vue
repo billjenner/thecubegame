@@ -196,11 +196,17 @@ const answers = ref({
 async function startTest() {
   step.value = 2
   await store.saveAnswers(answers.value)
+  if (store.error) {
+    errorMessage.value = store.error
+  }
 }
 
 async function finishTest() {
   finished.value = true
   await store.finishAnswers(answers.value)
+  if (store.error) {
+    errorMessage.value = store.error
+  }
 }
 
 async function analyzeResults() {
@@ -215,6 +221,11 @@ async function analyzeResults() {
 
   errorMessage.value = ''
   await store.finishAnswers(answers.value)
+  if (store.error) {
+    errorMessage.value = store.error
+    return
+  }
+
   router.push('/personality-review')
 }
 </script>
