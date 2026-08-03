@@ -40,7 +40,7 @@
           :rules="[(val) => !!val || 'Password is required']"
         />
 
-        <q-btn color="negative" label="Create User" type="submit" class="full-width" />
+        <q-btn color="primary" label="Create User" type="submit" class="full-width" />
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">

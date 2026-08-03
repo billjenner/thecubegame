@@ -14,7 +14,7 @@
           :rules="[(val) => !!val || 'Email is required']"
         />
 
-        <q-btn color="negative" label="Send Password" type="submit" class="full-width" />
+        <q-btn color="primary" label="Send Password" type="submit" class="full-width" />
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center" :class="messageClass">

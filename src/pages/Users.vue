@@ -4,10 +4,10 @@
       <div class="text-h5 text-center q-mb-md">Users</div>
 
       <div class="text-center q-mb-sm">
-        <q-btn color="negative" label="Load users" @click="loadUsers" />
+        <q-btn color="primary" label="Load users" @click="loadUsers" />
       </div>
 
-      <div v-if="store.error" class="text-center text-negative q-mb-sm">
+      <div v-if="store.error" class="text-center text-primary q-mb-sm">
         {{ store.error }}
       </div>
 

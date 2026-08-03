@@ -7,7 +7,7 @@
         <q-card-section>
           <div class="row items-center justify-between q-mb-sm">
             <div class="text-subtitle1">Saved responses</div>
-            <q-btn color="negative" label="Refresh" @click="loadAnswers" />
+            <q-btn color="primary" label="Refresh" @click="loadAnswers" />
           </div>
 
           <q-table
