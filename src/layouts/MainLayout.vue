@@ -154,10 +154,14 @@ const leftDrawerOpen = ref(false)
 const deferredInstallPrompt = ref(null)
 const showInstallDialog = ref(false)
 
-function navigate(path) {
+async function navigate(path) {
   if (!(usersStore.currentUser && usersStore.currentUser.email)) {
     router.push('/login')
     return
+  }
+
+  if (path === '/personality-review') {
+    await promptInstall()
   }
 
   router.push(path)
@@ -168,14 +172,14 @@ function logOff() {
   router.push('/login')
 }
 
-function navigateAndClose(path) {
+async function navigateAndClose(path) {
   leftDrawerOpen.value = false
   if (path === '/login') {
     router.push(path)
     return
   }
 
-  navigate(path)
+  await navigate(path)
 }
 
 function logOffAndClose() {
