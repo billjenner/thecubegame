@@ -24,7 +24,7 @@
           :rules="[(val) => !!val || 'Password is required']"
         />
 
-        <q-btn color="negative" label="Log In" type="submit" class="full-width" />
+        <q-btn color="primary" label="Log In" type="submit" class="full-width" />
 
         <div class="row q-col-gutter-sm q-mt-sm">
           <q-btn
