@@ -62,6 +62,7 @@
                           "
                         >
                           <div
+                            v-if="!field.key.includes('explanation')"
                             :class="
                               field.key.includes('explanation')
                                 ? 'text-caption text-white-7'
@@ -111,9 +112,9 @@ const columns = [
 
 const detailFields = [
   { key: 'room', label: 'Room' },
-  { key: 'room_explanation', label: 'Room Explanation' },
+  { key: 'room_explanation', label: 'Explanation' },
   { key: 'cube', label: 'Cube' },
-  { key: 'cube_explanation', label: 'Cube Explanation' },
+  { key: 'cube_explanation', label: 'Explanation' },
   { key: 'ladder', label: 'Ladder' },
   { key: 'ladder_explanation', label: 'Ladder Explanation' },
   { key: 'horse', label: 'Horse' },
@@ -171,7 +172,7 @@ async function ensureExplanations(answer) {
 
   for (const [field, explanationField] of fields) {
     if (answer[explanationField]) {
-      explanations[field] = answer[explanationField]
+      explanations[explanationField] = answer[explanationField]
       continue
     }
 
@@ -179,12 +180,12 @@ async function ensureExplanations(answer) {
       [field]: answer[field] || '',
     })
 
-    explanations[field] = generatedExplanation[field] || ''
+    explanations[explanationField] = generatedExplanation[field] || ''
 
     try {
       await supabase
         .from('answers')
-        .update({ [explanationField]: explanations[field] })
+        .update({ [explanationField]: explanations[explanationField] })
         .eq('email', answer.email)
     } catch (error) {
       console.warn(`Unable to persist generated explanation for ${field}.`, error)

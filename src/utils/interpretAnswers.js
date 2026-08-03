@@ -146,8 +146,8 @@ function buildFallbackExplanation(field, answerText, mapping) {
   })
 
   if (interpretations.length) {
-    const joined = interpretations.slice(0, 2).join(' ')
-    return `${field.charAt(0).toUpperCase() + field.slice(1)} appears to reflect ${joined}`
+    const explanation = interpretations.slice(0, 2).join(' ')
+    return explanation
   }
 
   return `${field.charAt(0).toUpperCase() + field.slice(1)} seems to carry a thoughtful symbolic meaning that may relate to identity, growth, relationships, or emotional awareness.`
