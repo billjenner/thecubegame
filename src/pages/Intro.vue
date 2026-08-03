@@ -6,18 +6,34 @@
       style="border-radius: 12px; max-width: 100%; margin-top: 40px; margin-bottom: 40px"
     />
 
-    <h5 style="max-width: 50vw; margin: 2 auto 24px; text-align: justify">
+    <h6
+      style="
+        max-width: 75vw;
+        margin: 2 auto 16px;
+        text-align: justify;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      "
+    >
       The power of interpretation and association is evident in relational psychology. Relational
       psychology is well known for its tests and quizzes. Many of them feel more like games and you
       know how much I love games!
-    </h5>
+    </h6>
 
-    <h5 style="max-width: 50vw; margin: 2 auto 24px; text-align: justify">
+    <h6
+      style="
+        max-width: 75vw;
+        margin: 2 auto 16px;
+        text-align: justify;
+        font-size: 1.05rem;
+        line-height: 1.6;
+      "
+    >
       Most of these tests are designed to allow the subconscious to reveal the truth about you to
       your conscious awareness and/or to your therapist. To see how this works for yourself, give
       this very famous one to try! It’s called “The Cube”. This test was said to have been created
       by a psychologist from Japan.
-    </h5>
+    </h6>
 
     <div style="flex: 1 1 auto; min-height: 96px; width: 100%"></div>
 

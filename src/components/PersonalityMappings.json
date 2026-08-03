@@ -4,68 +4,55 @@
     "features": {
       "size": {
         "small": {
-          "symbolicMeaning": "Sense of privacy, simplicity, and personal boundaries",
-          "interpretation": "You may value control, intimacy, and having a comfortable personal space. You may prefer depth over expansion."
+          "interpretation": "Sense of privacy, simplicity, and personal boundaries. Attention more focused inward. Prefer a more manageable environment rather than lots of space or stimulation."
+        },
+        "medium": {
+          "interpretation": "Balanced sense of personal space. Your environment feels manageable without needing it to be expansive. You're neither strongly withdrawn nor highly dependent on your surroundings."
         },
         "large": {
-          "symbolicMeaning": "Openness, confidence, and possibility",
-          "interpretation": "You may see yourself as capable of growth and comfortable exploring new experiences."
-        },
-        "vast": {
-          "symbolicMeaning": "Imagination, freedom, and unlimited possibilities",
-          "interpretation": "You may have a rich inner world, ambitious dreams, or a strong desire for exploration and discovery."
+          "interpretation": "Openness, confidence, capable of growth, and comfortable exploring new experiences."
         }
       },
 
       "windows": {
         "many": {
-          "symbolicMeaning": "Openness and connection to the outside world",
-          "interpretation": "You may be curious, receptive to new ideas, and interested in maintaining connections with others."
+          "interpretation": "You are curious, receptive to new ideas, happy to see the outside world, and interested in maintaining connections with others."
         },
         "few": {
-          "symbolicMeaning": "Selective openness and privacy",
-          "interpretation": "You may carefully choose what influences you and who you allow into your personal world."
+          "interpretation": "You are selective and carefully choose what influences you and who you allow into your personal world."
         },
         "none": {
-          "symbolicMeaning": "Self-containment and inward focus",
-          "interpretation": "You may be introspective, private, or prefer relying on your own thoughts and experiences."
+          "interpretatio": "Self-containment and introspection. You prefer privacy,relying on your own thoughts and experiences."
         }
       },
 
       "doors": {
         "multiple": {
-          "symbolicMeaning": "Choices, opportunities, and flexibility",
           "interpretation": "You may see many possible paths in life and enjoy having options available."
         },
         "one": {
-          "symbolicMeaning": "Focus and commitment",
           "interpretation": "You may prefer a clear direction and concentrate deeply on chosen goals."
         },
         "none": {
-          "symbolicMeaning": "Strong boundaries or restriction",
           "interpretation": "You may value security and protection, or you may feel limited by current circumstances."
         }
       },
 
       "comfort": {
         "comfortable": {
-          "symbolicMeaning": "Self-acceptance and emotional stability",
-          "interpretation": "You may feel at peace with yourself and your current situation."
+          "interpretatio": "Self-acceptance and emotional stability"
         },
         "uncomfortable": {
-          "symbolicMeaning": "Internal tension or desire for change",
-          "interpretation": "You may feel unsettled, challenged, or motivated to improve your circumstances."
+          "interpretatio": "Internal tension or desire for change"
         }
       },
 
       "safety": {
         "safe": {
-          "symbolicMeaning": "Security and belonging",
-          "interpretation": "You likely experience yourself as having a stable emotional foundation."
+          "interpretation": "You see yourself as having a stable emotional foundation."
         },
         "unsafe": {
-          "symbolicMeaning": "Vulnerability and uncertainty",
-          "interpretation": "You may feel exposed, cautious, or aware of areas where you want greater security."
+          "interpretation": "You are cautious, sometimes uncertain, or feel vulnerable."
         }
       }
     }
@@ -76,71 +63,58 @@
     "features": {
       "location": {
         "prominent": {
-          "symbolicMeaning": "Confidence and presence",
-          "interpretation": "You may see yourself as someone who has an important place in the world and wants to make an impact."
+          "interpretatio": "Confidence and presence"
         },
         "hidden": {
-          "symbolicMeaning": "Privacy and humility",
-          "interpretation": "You may prefer staying behind the scenes or keeping parts of yourself protected."
+          "interpretatio": "Privacy and humility"
         },
         "distant": {
-          "symbolicMeaning": "Self-reflection and emotional distance",
-          "interpretation": "You may be observing yourself from a distance or exploring your identity."
+          "interpretatio": "Self-reflection and emotional distance"
         }
       },
 
       "position": {
         "ground": {
-          "symbolicMeaning": "Stability and practicality",
-          "interpretation": "You may value realism, structure, and staying connected to reality."
+          "interpretatio": "Stability and practicality"
         },
         "floating": {
-          "symbolicMeaning": "Imagination and idealism",
-          "interpretation": "You may be creative, visionary, or comfortable exploring ideas beyond ordinary limits."
+          "interpretatio": "Imagination and idealism"
         }
       },
 
       "size": {
         "large": {
-          "symbolicMeaning": "Strong identity and confidence",
-          "interpretation": "You may see yourself as capable, influential, or someone who wants to make a significant contribution."
+          "interpretatio": "Strong identity and confidence"
         },
         "small": {
-          "symbolicMeaning": "Humility and privacy",
-          "interpretation": "You may be modest, reserved, or prefer not to dominate attention."
+          "interpretatio": "Humility and privacy"
         }
       },
 
       "transparency": {
         "transparent": {
-          "symbolicMeaning": "Openness and emotional visibility",
-          "interpretation": "You may value honesty and allowing others to understand your thoughts and feelings."
+          "interpretatio": "Openness and emotional visibility"
         },
         "opaque": {
-          "symbolicMeaning": "Privacy and personal boundaries",
-          "interpretation": "You may carefully control what others see and protect your inner thoughts."
+          "interpretatio": "Privacy and personal boundaries"
         }
       },
 
       "texture": {
         "smooth": {
-          "symbolicMeaning": "Adaptability and ease",
-          "interpretation": "You may see yourself as flexible, approachable, and able to handle change."
+          "interpretatio": "Adaptability and ease"
         },
         "rough": {
-          "symbolicMeaning": "Resilience and complexity",
-          "interpretation": "You may view yourself as shaped by experiences, challenges, and personal growth."
+          "interpretatio": "Resilience and complexity"
         }
       },
 
       "condition": {
         "perfect": {
-          "symbolicMeaning": "Balance and confidence",
-          "interpretation": "You may feel comfortable with who you are and recognize your strengths."
+          "interpretatio": "Balance and confidence"
         },
         "damaged": {
-          "symbolicMeaning": "Challenges and imperfections",
-          "interpretation": "You may recognize struggles, past experiences, or areas where growth is still occurring."
+          "interpretatio": "Challenges and imperfections"
         }
       }
     }
@@ -151,93 +125,76 @@
     "features": {
       "location": {
         "nearCube": {
-          "symbolicMeaning": "Goals connected to identity",
-          "interpretation": "Your ambitions are closely tied to who you are and how you define yourself."
+          "interpretatio": "Goals connected to identity"
         },
         "farFromCube": {
-          "symbolicMeaning": "Separate or distant aspirations",
-          "interpretation": "Your goals may represent a future version of yourself that feels separate from your current identity."
+          "interpretatio": "Separate or distant aspirations"
         }
       },
 
       "relationshipToRoom": {
         "insideRoom": {
-          "symbolicMeaning": "Growth integrated into life",
-          "interpretation": "You may see personal development as a natural part of your everyday life."
+          "interpretatio": "Growth integrated into life"
         },
         "outsideRoom": {
-          "symbolicMeaning": "Future goals beyond current circumstances",
-          "interpretation": "You may feel your ambitions require leaving your current situation or entering a new phase of life."
+          "interpretatio": "Future goals beyond current circumstances"
         }
       },
 
       "relationshipToCube": {
         "touching": {
-          "symbolicMeaning": "Identity and ambition are connected",
-          "interpretation": "Your goals are deeply connected to your sense of purpose and self-worth."
+          "interpretatio": "Identity and ambition are connected"
         },
         "near": {
-          "symbolicMeaning": "Aligned aspirations",
-          "interpretation": "Your ambitions support and reinforce your personal identity."
+          "interpretatio": "Aligned aspirations"
         },
         "far": {
-          "symbolicMeaning": "Separate ambitions",
-          "interpretation": "Your goals may feel like something you are working toward but have not yet incorporated into your identity."
+          "interpretatio": "Separate ambitions"
         }
       },
 
       "support": {
         "leaning": {
-          "symbolicMeaning": "Reliance on support systems",
-          "interpretation": "You may value guidance, relationships, teamwork, or external resources when pursuing goals."
+          "interpretatio": "Reliance on support systems"
         },
         "freeStanding": {
-          "symbolicMeaning": "Independence and self-reliance",
-          "interpretation": "You may prefer achieving success through your own abilities and determination."
+          "interpretatio": "Independence and self-reliance"
         }
       },
 
       "height": {
         "tall": {
-          "symbolicMeaning": "Large ambitions and aspirations",
-          "interpretation": "You may set challenging goals and desire significant achievement."
+          "interpretatio": "Large ambitions and aspirations"
         },
         "short": {
-          "symbolicMeaning": "Practical and achievable goals",
-          "interpretation": "You may prefer realistic objectives and measurable progress."
+          "interpretatio": "Practical and achievable goals"
         }
       },
 
       "climbDifficulty": {
         "easy": {
-          "symbolicMeaning": "Confidence and preparedness",
-          "interpretation": "You may believe you have the ability and resources needed to achieve your goals."
+          "interpretatio": "Confidence and preparedness"
         },
         "difficult": {
-          "symbolicMeaning": "Challenges and obstacles",
-          "interpretation": "You may recognize barriers or feel that progress requires significant effort."
+          "interpretatio": "Challenges and obstacles"
         }
       },
 
       "material": {
         "strong": {
-          "symbolicMeaning": "Durability and reliability",
-          "interpretation": "You approach growth with preparation, discipline, and confidence."
+          "interpretatio": "Durability and reliability"
         },
         "fragile": {
-          "symbolicMeaning": "Uncertainty and caution",
-          "interpretation": "You may feel your path requires careful decisions or additional support."
+          "interpretatio": "Uncertainty and caution"
         }
       },
 
       "condition": {
         "new": {
-          "symbolicMeaning": "Fresh opportunities",
-          "interpretation": "You may feel optimistic and ready for new challenges."
+          "interpretatio": "Fresh opportunities"
         },
         "damaged": {
-          "symbolicMeaning": "Past obstacles",
-          "interpretation": "Previous experiences may influence how you approach future goals."
+          "interpretatio": "Past obstacles"
         }
       }
     }
@@ -248,101 +205,82 @@
     "features": {
       "location": {
         "prominent": {
-          "symbolicMeaning": "Love as an important life priority",
-          "interpretation": "Romantic connection may play a central role in your emotional life."
+          "interpretatio": "Love as an important life priority"
         },
         "distant": {
-          "symbolicMeaning": "Emotional independence",
-          "interpretation": "You may value personal space or experience love as something separate from your identity."
+          "interpretatio": "Emotional independence"
         }
       },
 
       "relationshipToCube": {
         "close": {
-          "symbolicMeaning": "Strong emotional connection",
-          "interpretation": "You may desire a partner who is deeply connected with your identity and life."
+          "interpretatio": "Strong emotional connection"
         },
         "far": {
-          "symbolicMeaning": "Independence within relationships",
-          "interpretation": "You may value maintaining individuality while sharing a relationship."
+          "interpretatio": "Independence within relationships"
         },
         "touching": {
-          "symbolicMeaning": "Deep intimacy and unity",
-          "interpretation": "You may seek a strong emotional bond and sense of partnership."
+          "interpretatio": "Deep intimacy and unity"
         }
       },
 
       "size": {
         "large": {
-          "symbolicMeaning": "Strong partner influence",
-          "interpretation": "A romantic relationship may have a major impact on your life and decisions."
+          "interpretatio": "Strong partner influence"
         },
         "small": {
-          "symbolicMeaning": "Supportive but independent relationship",
-          "interpretation": "You may value love while maintaining a strong sense of individuality."
+          "interpretatio": "Supportive but independent relationship"
         }
       },
 
       "appearance": {
         "beautifulHealthy": {
-          "symbolicMeaning": "Positive expectations of love",
-          "interpretation": "You may seek admiration, attraction, and emotional fulfillment."
+          "interpretatio": "Positive expectations of love"
         },
         "injuredNeglected": {
-          "symbolicMeaning": "Relationship concerns",
-          "interpretation": "You may be sensitive to vulnerability, trust issues, or emotional wounds."
+          "interpretatio": "Relationship concerns"
         }
       },
 
       "behavior": {
         "calm": {
-          "symbolicMeaning": "Peaceful partnership",
-          "interpretation": "You may value stability, trust, and emotional security."
+          "interpretatio": "Peaceful partnership"
         },
         "playful": {
-          "symbolicMeaning": "Joy and connection",
-          "interpretation": "You may desire fun, affection, and emotional warmth."
+          "interpretatio": "Joy and connection"
         },
         "running": {
-          "symbolicMeaning": "Passion and freedom",
-          "interpretation": "You may value excitement, adventure, and independence."
+          "interpretatio": "Passion and freedom"
         },
         "restless": {
-          "symbolicMeaning": "Uncertainty or unmet needs",
-          "interpretation": "You may experience concerns about stability or emotional connection."
+          "interpretatio": "Uncertainty or unmet needs"
         }
       },
 
       "freedom": {
         "free": {
-          "symbolicMeaning": "Trust and independence",
-          "interpretation": "You may believe healthy relationships require freedom and mutual respect."
+          "interpretatio": "Trust and independence"
         },
         "tied": {
-          "symbolicMeaning": "Commitment and security",
-          "interpretation": "You may value loyalty, stability, and strong attachment."
+          "interpretatio": "Commitment and security"
         }
       },
 
       "saddle": {
         "present": {
-          "symbolicMeaning": "Shared direction and commitment",
-          "interpretation": "You may desire a relationship built around teamwork and shared goals."
+          "interpretatio": "Shared direction and commitment"
         },
         "absent": {
-          "symbolicMeaning": "Spontaneity and independence",
-          "interpretation": "You may prefer relationships that feel natural and unrestricted."
+          "interpretatio": "Spontaneity and independence"
         }
       },
 
       "yourFeeling": {
         "love": {
-          "symbolicMeaning": "Emotional openness",
-          "interpretation": "You are receptive to intimacy and connection."
+          "interpretatio": "Emotional openness"
         },
         "fear": {
-          "symbolicMeaning": "Emotional protection",
-          "interpretation": "You may be cautious about vulnerability or trust."
+          "interpretatio": "Emotional protection"
         }
       }
     }
@@ -353,60 +291,49 @@
     "features": {
       "presence": {
         "exists": {
-          "symbolicMeaning": "Openness to experiences",
-          "interpretation": "You are interested in exploring possibilities beyond your immediate environment."
+          "interpretatio": "Openness to experiences"
         },
         "missing": {
-          "symbolicMeaning": "Self-containment",
-          "interpretation": "You may prefer reflection, privacy, and focusing inward."
+          "interpretatio": "Self-containment"
         }
       },
 
       "size": {
         "large": {
-          "symbolicMeaning": "Broad perspective",
-          "interpretation": "You may be curious, open-minded, and interested in understanding the world."
+          "interpretatio": "Broad perspective"
         },
         "small": {
-          "symbolicMeaning": "Selective awareness",
-          "interpretation": "You may carefully choose what influences your thoughts and attention."
+          "interpretatio": "Selective awareness"
         }
       },
 
       "outsideView": {
         "pleasant": {
-          "symbolicMeaning": "Optimistic worldview",
-          "interpretation": "You may expect positive possibilities and opportunities ahead."
+          "interpretatio": "Optimistic worldview"
         },
         "dark": {
-          "symbolicMeaning": "Concern about uncertainty",
-          "interpretation": "You may approach the future cautiously or be aware of potential challenges."
+          "interpretatio": "Concern about uncertainty"
         }
       },
 
       "clarity": {
         "clear": {
-          "symbolicMeaning": "Understanding and awareness",
-          "interpretation": "You may feel confident in your perception of yourself and the world."
+          "interpretatio": "Understanding and awareness"
         },
         "dirty": {
-          "symbolicMeaning": "Uncertainty or emotional filters",
-          "interpretation": "You may feel that something is limiting your ability to see clearly."
+          "interpretatio": "Uncertainty or emotional filters"
         },
         "broken": {
-          "symbolicMeaning": "Disruption in perspective",
-          "interpretation": "You may have experienced events that changed how you view the world."
+          "interpretatio": "Disruption in perspective"
         }
       },
 
       "openClosed": {
         "open": {
-          "symbolicMeaning": "Receptiveness and communication",
-          "interpretation": "You may welcome new ideas, relationships, and experiences."
+          "interpretatio": "Receptiveness and communication"
         },
         "closed": {
-          "symbolicMeaning": "Protection and boundaries",
-          "interpretation": "You may value safety and control over outside influences."
+          "interpretatio": "Protection and boundaries"
         }
       }
     }
@@ -416,259 +343,207 @@
     "symbol": "Friends, friendships, and social connections",
     "features": {
       "overall": {
-        "symbolicMeaning": "Friendships and social relationships",
-        "interpretation": "The flowers represent the people you care about, the friendships you cultivate, and how you experience connection, belonging, and mutual support."
+        "interpretatio": "Friendships and social relationships"
       },
 
       "location": {
         "insideRoom": {
-          "symbolicMeaning": "Friendships as part of your inner world",
-          "interpretation": "You may see close friendships as an important part of who you are and an essential part of your emotional life."
+          "interpretatio": "Friendships as part of your inner world"
         },
         "outsideRoom": {
-          "symbolicMeaning": "Friendships connected to the broader world",
-          "interpretation": "You may view friendships as experiences that expand beyond yourself through community, activities, and shared interests."
+          "interpretatio": "Friendships connected to the broader world"
         }
       },
 
       "distanceFromCube": {
         "close": {
-          "symbolicMeaning": "Friendships closely connected to identity",
-          "interpretation": "Your friendships may strongly influence who you are, your values, and how you see yourself."
+          "interpretatio": "Friendships closely connected to identity"
         },
         "far": {
-          "symbolicMeaning": "Independence within friendships",
-          "interpretation": "You may value friendships while maintaining a strong sense of individuality and personal space."
+          "interpretatio": "Independence within friendships"
         },
         "touching": {
-          "symbolicMeaning": "Deep emotional connection",
-          "interpretation": "You may experience close friendships as an important part of your identity and emotional support system."
+          "interpretatio": "Deep emotional connection"
         }
       },
 
       "distanceFromRoom": {
         "near": {
-          "symbolicMeaning": "Accessible and active relationships",
-          "interpretation": "You may prefer friendships that are present, available, and actively involved in your daily life."
+          "interpretatio": "Accessible and active relationships"
         },
         "far": {
-          "symbolicMeaning": "Independent or distant relationships",
-          "interpretation": "You may maintain friendships across distance or value relationships that allow significant independence."
+          "interpretatio": "Independent or distant relationships"
         }
       },
 
       "number": {
         "many": {
-          "symbolicMeaning": "Broad social network",
-          "interpretation": "You may enjoy having many connections and appreciate different perspectives and personalities."
+          "interpretatio": "Broad social network"
         },
         "few": {
-          "symbolicMeaning": "Close and selective friendships",
-          "interpretation": "You may prefer a smaller number of meaningful relationships built on trust and depth."
+          "interpretatio": "Close and selective friendships"
         },
         "one": {
-          "symbolicMeaning": "A highly valued relationship",
-          "interpretation": "You may place great importance on one especially meaningful friendship or connection."
+          "interpretatio": "A highly valued relationship"
         }
       },
 
       "type": {
         "roses": {
-          "symbolicMeaning": "Deep affection and appreciation",
-          "interpretation": "You may value friendships built around loyalty, admiration, and emotional connection."
+          "interpretatio": "Deep affection and appreciation"
         },
         "wildflowers": {
-          "symbolicMeaning": "Spontaneity and individuality",
-          "interpretation": "You may appreciate friendships with unique, independent people who bring variety into your life."
+          "interpretatio": "Spontaneity and individuality"
         },
         "sunflowers": {
-          "symbolicMeaning": "Optimism and encouragement",
-          "interpretation": "You may value friends who bring happiness, positivity, and motivation."
+          "interpretatio": "Optimism and encouragement"
         },
         "lilies": {
-          "symbolicMeaning": "Peace and emotional support",
-          "interpretation": "You may seek friendships that provide calmness, trust, and emotional stability."
+          "interpretatio": "Peace and emotional support"
         },
         "orchids": {
-          "symbolicMeaning": "Uniqueness and sophistication",
-          "interpretation": "You may value friendships with people who are distinctive, creative, or intellectually stimulating."
+          "interpretatio": "Uniqueness and sophistication"
         },
         "daisies": {
-          "symbolicMeaning": "Simplicity and genuine connection",
-          "interpretation": "You may appreciate friendships that feel natural, honest, and uncomplicated."
+          "interpretatio": "Simplicity and genuine connection"
         }
       },
 
       "color": {
         "red": {
-          "symbolicMeaning": "Passion, loyalty, and strong emotional bonds",
-          "interpretation": "You may value friendships that are deeply connected, loyal, protective, and emotionally expressive."
+          "interpretatio": "Passion, loyalty, and strong emotional bonds"
         },
         "pink": {
-          "symbolicMeaning": "Affection, kindness, and compassion",
-          "interpretation": "You may appreciate friends who are caring, gentle, understanding, and emotionally supportive."
+          "interpretatio": "Affection, kindness, and compassion"
         },
         "white": {
-          "symbolicMeaning": "Trust, honesty, and sincerity",
-          "interpretation": "You may seek friendships based on authenticity, acceptance, and peaceful connection."
+          "interpretatio": "Trust, honesty, and sincerity"
         },
         "yellow": {
-          "symbolicMeaning": "Joy, optimism, and companionship",
-          "interpretation": "You may value friendships that bring laughter, happiness, encouragement, and positive energy."
+          "interpretatio": "Joy, optimism, and companionship"
         },
         "orange": {
-          "symbolicMeaning": "Adventure, enthusiasm, and creativity",
-          "interpretation": "You may enjoy friendships that inspire exploration, excitement, and shared experiences."
+          "interpretatio": "Adventure, enthusiasm, and creativity"
         },
         "blue": {
-          "symbolicMeaning": "Trust, loyalty, and emotional calm",
-          "interpretation": "You may value dependable friendships that provide stability, comfort, and a sense of security."
+          "interpretatio": "Trust, loyalty, and emotional calm"
         },
         "purple": {
-          "symbolicMeaning": "Depth, uniqueness, and imagination",
-          "interpretation": "You may be drawn to friendships with people who are creative, thoughtful, and emotionally complex."
+          "interpretatio": "Depth, uniqueness, and imagination"
         },
         "lavender": {
-          "symbolicMeaning": "Gentleness, sensitivity, and peace",
-          "interpretation": "You may appreciate friendships that feel calming, accepting, and emotionally safe."
+          "interpretatio": "Gentleness, sensitivity, and peace"
         },
         "green": {
-          "symbolicMeaning": "Growth, healing, and harmony",
-          "interpretation": "You may value friendships that encourage personal growth and positive change."
+          "interpretatio": "Growth, healing, and harmony"
         },
         "black": {
-          "symbolicMeaning": "Depth, mystery, and transformation",
-          "interpretation": "You may value friendships with people who have depth, resilience, and unique life experiences."
+          "interpretatio": "Depth, mystery, and transformation"
         },
         "brown": {
-          "symbolicMeaning": "Reliability and grounding",
-          "interpretation": "You may seek dependable friendships built on loyalty, stability, and practical support."
+          "interpretatio": "Reliability and grounding"
         },
         "multicolor": {
-          "symbolicMeaning": "Diversity and variety",
-          "interpretation": "You may appreciate having friendships with many different personalities, backgrounds, and perspectives."
+          "interpretatio": "Diversity and variety"
         }
       },
 
       "size": {
         "large": {
-          "symbolicMeaning": "Strong influence of friendships",
-          "interpretation": "Friendships may play a major role in your happiness, identity, and emotional well-being."
+          "interpretation": "Strong influence of friendships"
         },
         "small": {
-          "symbolicMeaning": "Private or subtle connections",
-          "interpretation": "You may value friendships that are meaningful but not necessarily central to your public life."
+          "interpretatio": "Private or subtle connections"
         }
       },
 
       "arrangement": {
         "organized": {
-          "symbolicMeaning": "Intentional relationships",
-          "interpretation": "You may carefully maintain friendships and value harmony, balance, and connection."
+          "interpretatio": "Intentional relationships"
         },
         "wild": {
-          "symbolicMeaning": "Spontaneous relationships",
-          "interpretation": "You may enjoy friendships that are unpredictable, diverse, and naturally developing."
+          "interpretatio": "Spontaneous relationships"
         },
         "scattered": {
-          "symbolicMeaning": "Independent connections",
-          "interpretation": "Your friendships may come from many areas of life without needing to be closely connected."
+          "interpretatio": "Independent connections"
         }
       },
 
       "container": {
         "vase": {
-          "symbolicMeaning": "Maintained and intentional friendships",
-          "interpretation": "You may actively invest effort into preserving and nurturing important relationships."
+          "interpretatio": "Maintained and intentional friendships"
         },
         "ground": {
-          "symbolicMeaning": "Natural and lasting friendships",
-          "interpretation": "You may value friendships that grow naturally through shared experiences and time."
+          "interpretatio": "Natural and lasting friendships"
         },
         "garden": {
-          "symbolicMeaning": "Community and belonging",
-          "interpretation": "You may value being part of a supportive group or social environment."
+          "interpretatio": "Community and belonging"
         }
       },
 
       "strength": {
         "hardy": {
-          "symbolicMeaning": "Reliable and resilient friendships",
-          "interpretation": "You may value friends who remain supportive through challenges and difficult times."
+          "interpretatio": "Reliable and resilient friendships"
         },
         "fragile": {
-          "symbolicMeaning": "Sensitive relationships",
-          "interpretation": "You may recognize that friendships require care, attention, and emotional consideration."
+          "interpretatio": "Sensitive relationships"
         }
       },
 
       "condition": {
         "healthy": {
-          "symbolicMeaning": "Strong and fulfilling relationships",
-          "interpretation": "You may feel satisfied with your friendships and experience mutual support."
+          "interpretatio": "Strong and fulfilling relationships"
         },
         "damaged": {
-          "symbolicMeaning": "Relationship difficulties",
-          "interpretation": "You may have concerns about conflict, distance, or friendships needing repair."
+          "interpretatio": "Relationship difficulties"
         }
       },
 
       "lifeState": {
         "alive": {
-          "symbolicMeaning": "Active and meaningful friendships",
-          "interpretation": "You may experience your friendships as growing, supportive, and emotionally rewarding."
+          "interpretatio": "Active and meaningful friendships"
         },
         "dead": {
-          "symbolicMeaning": "Past relationships or emotional endings",
-          "interpretation": "You may be reflecting on friendships that have changed, ended, or remain as memories."
+          "interpretatio": "Past relationships or emotional endings"
         }
       },
 
       "careRequired": {
         "needsCare": {
-          "symbolicMeaning": "Relationship maintenance",
-          "interpretation": "You recognize that friendships require communication, effort, and emotional investment."
+          "interpretatio": "Relationship maintenance"
         },
         "thriving": {
-          "symbolicMeaning": "Healthy connection",
-          "interpretation": "You may feel your friendships are naturally supported and mutually rewarding."
+          "interpretatio": "Healthy connection"
         }
       },
 
       "yourFeelings": {
         "positive": {
-          "symbolicMeaning": "Appreciation and connection",
-          "interpretation": "You likely experience friendships as sources of happiness, support, and belonging."
+          "interpretatio": "Appreciation and connection"
         },
         "negative": {
-          "symbolicMeaning": "Distance or unresolved emotions",
-          "interpretation": "You may have concerns, disappointments, or unmet needs within friendships."
+          "interpretatio": "Distance or unresolved emotions"
         }
       },
 
       "howFlowersFeelAboutYou": {
         "thrivingNearYou": {
-          "symbolicMeaning": "Mutual appreciation",
-          "interpretation": "You may feel valued, accepted, and appreciated by your friends."
+          "interpretatio": "Mutual appreciation"
         },
         "neglected": {
-          "symbolicMeaning": "Concerns about reciprocity",
-          "interpretation": "You may question whether friendships receive equal care and attention."
+          "interpretatio": "Concerns about reciprocity"
         }
       },
 
       "yourRole": {
         "protecting": {
-          "symbolicMeaning": "Nurturing relationships",
-          "interpretation": "You may see yourself as someone who protects and supports the people you care about."
+          "interpretatio": "Nurturing relationships"
         },
         "caring": {
-          "symbolicMeaning": "Investment and commitment",
-          "interpretation": "You likely place importance on maintaining and strengthening friendships."
+          "interpretatio": "Investment and commitment"
         },
         "ignoring": {
-          "symbolicMeaning": "Independence or emotional distance",
-          "interpretation": "You may prefer more personal space or may currently have limited emotional availability."
+          "interpretatio": "Independence or emotional distance"
         }
       }
     }

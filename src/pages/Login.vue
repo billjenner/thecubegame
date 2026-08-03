@@ -17,12 +17,20 @@
         <q-input
           v-model="password"
           label="Password"
-          type="password"
+          :type="showPassword ? 'text' : 'password'"
           outlined
           dense
           autocomplete="current-password"
           :rules="[(val) => !!val || 'Password is required']"
-        />
+        >
+          <template #append>
+            <q-icon
+              :name="showPassword ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="showPassword = !showPassword"
+            />
+          </template>
+        </q-input>
 
         <q-btn color="primary" label="Log In" type="submit" class="full-width" />
 
@@ -59,6 +67,7 @@ import { useUsersStore } from 'stores/users'
 
 const email = ref('')
 const password = ref('')
+const showPassword = ref(false)
 const message = ref('')
 const messageClass = ref('text-positive')
 

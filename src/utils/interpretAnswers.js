@@ -21,6 +21,14 @@ function findMatches(text, matchList) {
   return matchList.filter((term) => normalizedText.includes(term))
 }
 
+function getInterpretationText(valueData) {
+  if (!valueData || typeof valueData !== 'object') {
+    return ''
+  }
+
+  return valueData.interpretation || valueData.interpretatio || ''
+}
+
 function buildFallbackExplanation(field, answerText, mapping) {
   const text = normalizeText(answerText)
 
@@ -103,16 +111,19 @@ function buildFallbackExplanation(field, answerText, mapping) {
 
       if (
         featureName === 'behavior' &&
-        ['calm', 'energetic', 'wild', 'tamed'].includes(valueName)
+        ['calm', 'energetic', 'wild', 'tamed', 'playful', 'running', 'restless'].includes(valueName)
       ) {
-        aliases.push(...['peaceful', 'restless', 'unruly', 'gentle'])
+        aliases.push(...['peaceful', 'restless', 'unruly', 'gentle', 'playful', 'running'])
       }
 
       if (featureName === 'distance' && ['close', 'far'].includes(valueName)) {
         aliases.push(...['near', 'distant'])
       }
 
-      if (featureName === 'relationshipToCube' && ['touching', 'near', 'far'].includes(valueName)) {
+      if (
+        featureName === 'relationshipToCube' &&
+        ['touching', 'near', 'close', 'far'].includes(valueName)
+      ) {
         aliases.push(...['close', 'beside', 'separate'])
       }
 
@@ -127,6 +138,22 @@ function buildFallbackExplanation(field, answerText, mapping) {
         aliases.push(...['open', 'closed'])
       }
 
+      if (featureName === 'openClosed' && ['open', 'closed'].includes(valueName)) {
+        aliases.push(...['open', 'closed'])
+      }
+
+      if (featureName === 'presence' && ['exists', 'missing'].includes(valueName)) {
+        aliases.push(...['present', 'there', 'none', 'missing'])
+      }
+
+      if (featureName === 'outsideView' && ['pleasant', 'dark'].includes(valueName)) {
+        aliases.push(...['bright', 'sunny', 'clear', 'dark', 'gloomy'])
+      }
+
+      if (featureName === 'clarity' && ['clear', 'dirty', 'broken'].includes(valueName)) {
+        aliases.push(...['clean', 'cloudy', 'covered', 'cracked'])
+      }
+
       if (featureName === 'intensity' && ['calm', 'stormy'].includes(valueName)) {
         aliases.push(...['quiet', 'chaotic'])
       }
@@ -139,8 +166,50 @@ function buildFallbackExplanation(field, answerText, mapping) {
         aliases.push(...['indoors', 'outdoors'])
       }
 
+      if (featureName === 'distanceFromCube' && ['close', 'far', 'touching'].includes(valueName)) {
+        aliases.push(...['near', 'beside', 'next to', 'distant'])
+      }
+
+      if (featureName === 'distanceFromRoom' && ['near', 'far'].includes(valueName)) {
+        aliases.push(...['close', 'distant'])
+      }
+
+      if (featureName === 'strength' && ['hardy', 'fragile'].includes(valueName)) {
+        aliases.push(...['strong', 'delicate'])
+      }
+
+      if (featureName === 'lifeState' && ['alive', 'dead'].includes(valueName)) {
+        aliases.push(...['living', 'wilted'])
+      }
+
+      if (featureName === 'careRequired' && ['needsCare', 'thriving'].includes(valueName)) {
+        aliases.push(...['attention', 'care', 'healthy'])
+      }
+
+      if (featureName === 'yourRole' && ['protecting', 'caring', 'ignoring'].includes(valueName)) {
+        aliases.push(...['protect', 'care for', 'neglect'])
+      }
+
+      if (featureName === 'yourFeeling' && ['love', 'fear'].includes(valueName)) {
+        aliases.push(...['love', 'afraid', 'fear'])
+      }
+
+      if (featureName === 'yourFeelings' && ['positive', 'negative'].includes(valueName)) {
+        aliases.push(...['good', 'happy', 'uneasy', 'negative'])
+      }
+
+      if (
+        featureName === 'howFlowersFeelAboutYou' &&
+        ['thrivingNearYou', 'neglected'].includes(valueName)
+      ) {
+        aliases.push(...['thriving', 'neglected'])
+      }
+
       if (findMatches(text, aliases).length) {
-        interpretations.push(valueData.interpretation)
+        const interpretationText = getInterpretationText(valueData)
+        if (interpretationText) {
+          interpretations.push(interpretationText)
+        }
       }
     })
   })
@@ -184,7 +253,7 @@ export async function generateAnswerExplanation(answers) {
               },
               {
                 role: 'user',
-                content: `Answer: ${answerText}\n\nMapping theme: ${mapping.symbol}`,
+                content: `Answer: ${answerText}\n\nMapping theme: ${mapping?.symbol || `${mappingName} symbolic theme`}`,
               },
             ],
             temperature: 0.6,
