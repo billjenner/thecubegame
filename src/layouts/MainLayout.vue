@@ -119,11 +119,28 @@
         <div v-else class="text-caption">Not logged in</div>
       </div>
     </q-footer>
+
+    <q-dialog v-model="showInstallDialog" persistent>
+      <q-card style="min-width: 320px; max-width: 420px">
+        <q-card-section>
+          <div class="text-h6">Install The Cube App?</div>
+        </q-card-section>
+
+        <q-card-section>
+          Install this app on your device for a faster, full-screen experience.
+        </q-card-section>
+
+        <q-card-actions align="right">
+          <q-btn flat color="negative" label="Not now" @click="dismissInstallDialog" />
+          <q-btn color="secondary" label="Install" @click="promptInstall" />
+        </q-card-actions>
+      </q-card>
+    </q-dialog>
   </q-layout>
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { onBeforeUnmount, onMounted, ref } from 'vue'
 import { useQuasar } from 'quasar'
 import { useRoute, useRouter } from 'vue-router'
 import { useUsersStore } from 'stores/users'
@@ -134,6 +151,8 @@ const hoveredPath = ref(null)
 const usersStore = useUsersStore()
 const router = useRouter()
 const leftDrawerOpen = ref(false)
+const deferredInstallPrompt = ref(null)
+const showInstallDialog = ref(false)
 
 function navigate(path) {
   if (!(usersStore.currentUser && usersStore.currentUser.email)) {
@@ -175,4 +194,41 @@ function buttonStyle(path) {
 
   return { backgroundColor: '#D9433F' }
 }
+
+function dismissInstallDialog() {
+  showInstallDialog.value = false
+}
+
+async function promptInstall() {
+  if (!deferredInstallPrompt.value) {
+    showInstallDialog.value = false
+    return
+  }
+
+  deferredInstallPrompt.value.prompt()
+  await deferredInstallPrompt.value.userChoice
+  deferredInstallPrompt.value = null
+  showInstallDialog.value = false
+}
+
+function handleBeforeInstallPrompt(event) {
+  event.preventDefault()
+  deferredInstallPrompt.value = event
+  showInstallDialog.value = true
+}
+
+function handleAppInstalled() {
+  deferredInstallPrompt.value = null
+  showInstallDialog.value = false
+}
+
+onMounted(() => {
+  window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+  window.addEventListener('appinstalled', handleAppInstalled)
+})
+
+onBeforeUnmount(() => {
+  window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt)
+  window.removeEventListener('appinstalled', handleAppInstalled)
+})
 </script>
