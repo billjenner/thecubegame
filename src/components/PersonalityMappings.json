@@ -22,7 +22,7 @@
           "interpretation": "You are selective and carefully choose what influences you and who you allow into your personal world."
         },
         "none": {
-          "interpretatio": "Self-containment and introspection. You prefer privacy,relying on your own thoughts and experiences."
+          "interpretation": "Self-containment and introspection. You prefer privacy,relying on your own thoughts and experiences."
         }
       },
 
@@ -40,10 +40,10 @@
 
       "comfort": {
         "comfortable": {
-          "interpretatio": "Self-acceptance and emotional stability"
+          "interpretation": "Self-acceptance and emotional stability."
         },
         "uncomfortable": {
-          "interpretatio": "Internal tension or desire for change"
+          "interpretation": "Internal tension or desire for change."
         }
       },
 
@@ -63,58 +63,58 @@
     "features": {
       "location": {
         "prominent": {
-          "interpretatio": "Confidence and presence"
+          "interpretation": "Confidence and presence."
         },
         "hidden": {
-          "interpretatio": "Privacy and humility"
+          "interpretation": "Privacy and humility."
         },
         "distant": {
-          "interpretatio": "Self-reflection and emotional distance"
+          "interpretation": "Self-reflection and emotional distance."
         }
       },
 
       "position": {
         "ground": {
-          "interpretatio": "Stability and practicality"
+          "interpretation": "Stability and practicality."
         },
         "floating": {
-          "interpretatio": "Imagination and idealism"
+          "interpretation": "Imagination and idealism."
         }
       },
 
       "size": {
         "large": {
-          "interpretatio": "Strong identity and confidence"
+          "interpretation": "Strong identity and confidence."
         },
         "small": {
-          "interpretatio": "Humility and privacy"
+          "interpretation": "Humility and privacy."
         }
       },
 
       "transparency": {
         "transparent": {
-          "interpretatio": "Openness and emotional visibility"
+          "interpretation": "Openness and emotional visibility."
         },
         "opaque": {
-          "interpretatio": "Privacy and personal boundaries"
+          "interpretation": "Privacy and personal boundaries."
         }
       },
 
       "texture": {
         "smooth": {
-          "interpretatio": "Adaptability and ease"
+          "interpretation": "Adaptability and ease."
         },
         "rough": {
-          "interpretatio": "Resilience and complexity"
+          "interpretation": "Resilience and complexity."
         }
       },
 
       "condition": {
         "perfect": {
-          "interpretatio": "Balance and confidence"
+          "interpretation": "Balance and confidence."
         },
         "damaged": {
-          "interpretatio": "Challenges and imperfections"
+          "interpretation": "Challenges and imperfections."
         }
       }
     }
@@ -125,76 +125,76 @@
     "features": {
       "location": {
         "nearCube": {
-          "interpretatio": "Goals connected to identity"
+          "interpretation": "Goals connected to identity."
         },
         "farFromCube": {
-          "interpretatio": "Separate or distant aspirations"
+          "interpretation": "Separate or distant aspirations."
         }
       },
 
       "relationshipToRoom": {
         "insideRoom": {
-          "interpretatio": "Growth integrated into life"
+          "interpretation": "Growth integrated into life."
         },
         "outsideRoom": {
-          "interpretatio": "Future goals beyond current circumstances"
+          "interpretation": "Future goals beyond current circumstances."
         }
       },
 
       "relationshipToCube": {
         "touching": {
-          "interpretatio": "Identity and ambition are connected"
+          "interpretation": "Identity and ambition are connected."
         },
         "near": {
-          "interpretatio": "Aligned aspirations"
+          "interpretation": "Aligned aspirations."
         },
         "far": {
-          "interpretatio": "Separate ambitions"
+          "interpretation": "Separate ambitions."
         }
       },
 
       "support": {
         "leaning": {
-          "interpretatio": "Reliance on support systems"
+          "interpretation": "Reliance on support systems."
         },
         "freeStanding": {
-          "interpretatio": "Independence and self-reliance"
+          "interpretation": "Independence and self-reliance."
         }
       },
 
       "height": {
         "tall": {
-          "interpretatio": "Large ambitions and aspirations"
+          "interpretation": "Large ambitions and aspirations."
         },
         "short": {
-          "interpretatio": "Practical and achievable goals"
+          "interpretation": "Practical and achievable goals."
         }
       },
 
       "climbDifficulty": {
         "easy": {
-          "interpretatio": "Confidence and preparedness"
+          "interpretation": "Confidence and preparedness."
         },
         "difficult": {
-          "interpretatio": "Challenges and obstacles"
+          "interpretation": "Challenges and obstacles."
         }
       },
 
       "material": {
         "strong": {
-          "interpretatio": "Durability and reliability"
+          "interpretation": "Durability and reliability."
         },
         "fragile": {
-          "interpretatio": "Uncertainty and caution"
+          "interpretation": "Uncertainty and caution."
         }
       },
 
       "condition": {
         "new": {
-          "interpretatio": "Fresh opportunities"
+          "interpretation": "Fresh opportunities."
         },
         "damaged": {
-          "interpretatio": "Past obstacles"
+          "interpretation": "Past obstacles."
         }
       }
     }
@@ -205,82 +205,82 @@
     "features": {
       "location": {
         "prominent": {
-          "interpretatio": "Love as an important life priority"
+          "interpretation": "Love as an important life priority."
         },
         "distant": {
-          "interpretatio": "Emotional independence"
+          "interpretation": "Emotional independence."
         }
       },
 
       "relationshipToCube": {
         "close": {
-          "interpretatio": "Strong emotional connection"
+          "interpretation": "Strong emotional connection."
         },
         "far": {
-          "interpretatio": "Independence within relationships"
+          "interpretation": "Independence within relationships."
         },
         "touching": {
-          "interpretatio": "Deep intimacy and unity"
+          "interpretation": "Deep intimacy and unity."
         }
       },
 
       "size": {
         "large": {
-          "interpretatio": "Strong partner influence"
+          "interpretation": "Strong partner influence."
         },
         "small": {
-          "interpretatio": "Supportive but independent relationship"
+          "interpretation": "Supportive but independent relationship."
         }
       },
 
       "appearance": {
         "beautifulHealthy": {
-          "interpretatio": "Positive expectations of love"
+          "interpretation": "Positive expectations of love."
         },
         "injuredNeglected": {
-          "interpretatio": "Relationship concerns"
+          "interpretation": "Relationship concerns."
         }
       },
 
       "behavior": {
         "calm": {
-          "interpretatio": "Peaceful partnership"
+          "interpretation": "Peaceful partnership."
         },
         "playful": {
-          "interpretatio": "Joy and connection"
+          "interpretation": "Joy and connection."
         },
         "running": {
-          "interpretatio": "Passion and freedom"
+          "interpretation": "Passion and freedom."
         },
         "restless": {
-          "interpretatio": "Uncertainty or unmet needs"
+          "interpretation": "Uncertainty or unmet needs."
         }
       },
 
       "freedom": {
         "free": {
-          "interpretatio": "Trust and independence"
+          "interpretation": "Trust and independence."
         },
         "tied": {
-          "interpretatio": "Commitment and security"
+          "interpretation": "Commitment and security."
         }
       },
 
       "saddle": {
         "present": {
-          "interpretatio": "Shared direction and commitment"
+          "interpretation": "Shared direction and commitment."
         },
         "absent": {
-          "interpretatio": "Spontaneity and independence"
+          "interpretation": "Spontaneity and independence."
         }
       },
 
       "yourFeeling": {
         "love": {
-          "interpretatio": "Emotional openness"
+          "interpretation": "Emotional openness."
         },
         "fear": {
-          "interpretatio": "Emotional protection"
+          "interpretation": "Emotional protection."
         }
       }
     }
@@ -291,49 +291,49 @@
     "features": {
       "presence": {
         "exists": {
-          "interpretatio": "Openness to experiences"
+          "interpretation": "Openness to experiences."
         },
         "missing": {
-          "interpretatio": "Self-containment"
+          "interpretation": "Self-containment."
         }
       },
 
       "size": {
         "large": {
-          "interpretatio": "Broad perspective"
+          "interpretation": "Broad perspective."
         },
         "small": {
-          "interpretatio": "Selective awareness"
+          "interpretation": "Selective awareness."
         }
       },
 
       "outsideView": {
         "pleasant": {
-          "interpretatio": "Optimistic worldview"
+          "interpretation": "Optimistic worldview."
         },
         "dark": {
-          "interpretatio": "Concern about uncertainty"
+          "interpretation": "Concern about uncertainty."
         }
       },
 
       "clarity": {
         "clear": {
-          "interpretatio": "Understanding and awareness"
+          "interpretation": "Understanding and awareness."
         },
         "dirty": {
-          "interpretatio": "Uncertainty or emotional filters"
+          "interpretation": "Uncertainty or emotional filters."
         },
         "broken": {
-          "interpretatio": "Disruption in perspective"
+          "interpretation": "Disruption in perspective."
         }
       },
 
       "openClosed": {
         "open": {
-          "interpretatio": "Receptiveness and communication"
+          "interpretation": "Receptiveness and communication."
         },
         "closed": {
-          "interpretatio": "Protection and boundaries"
+          "interpretation": "Protection and boundaries."
         }
       }
     }
@@ -343,198 +343,198 @@
     "symbol": "Friends, friendships, and social connections",
     "features": {
       "overall": {
-        "interpretatio": "Friendships and social relationships"
+        "interpretation": "Friendships and social relationships."
       },
 
       "location": {
         "insideRoom": {
-          "interpretatio": "Friendships as part of your inner world"
+          "interpretation": "Friendships as part of your inner world."
         },
         "outsideRoom": {
-          "interpretatio": "Friendships connected to the broader world"
+          "interpretation": "Friendships connected to the broader world."
         }
       },
 
       "distance": {
         "near": {
-          "interpretatio": "Accessible and active relationships"
+          "interpretation": "Accessible and active relationships."
         },
         "far": {
-          "interpretatio": "Independent or distant relationships"
+          "interpretation": "Independent or distant relationships."
         },
         "touching": {
-          "interpretatio": "Deep emotional connection"
+          "interpretation": "Deep emotional connection."
         }
       },
 
       "number": {
         "many": {
-          "interpretatio": "Broad social network"
+          "interpretation": "Broad social network."
         },
         "few": {
-          "interpretatio": "Close and selective friendships"
+          "interpretation": "Close and selective friendships."
         },
         "one": {
-          "interpretatio": "A highly valued relationship"
+          "interpretation": "A highly valued relationship."
         }
       },
 
       "type": {
         "roses": {
-          "interpretatio": "Deep affection and appreciation"
+          "interpretation": "Deep affection and appreciation."
         },
         "wildflowers": {
-          "interpretatio": "Spontaneity and individuality"
+          "interpretation": "Spontaneity and individuality."
         },
         "sunflowers": {
-          "interpretatio": "Optimism and encouragement"
+          "interpretation": "Optimism and encouragement."
         },
         "lilies": {
-          "interpretatio": "Peace and emotional support"
+          "interpretation": "Peace and emotional support."
         },
         "orchids": {
-          "interpretatio": "Uniqueness and sophistication"
+          "interpretation": "Uniqueness and sophistication."
         },
         "daisies": {
-          "interpretatio": "Simplicity and genuine connection"
+          "interpretation": "Simplicity and genuine connection."
         }
       },
 
       "color": {
         "red": {
-          "interpretatio": "Passion, loyalty, and strong emotional bonds"
+          "interpretation": "Passion, loyalty, and strong emotional bonds."
         },
         "pink": {
-          "interpretatio": "Affection, kindness, and compassion"
+          "interpretation": "Affection, kindness, and compassion."
         },
         "white": {
-          "interpretatio": "Trust, honesty, and sincerity"
+          "interpretation": "Trust, honesty, and sincerity."
         },
         "yellow": {
-          "interpretatio": "Joy, optimism, and companionship"
+          "interpretation": "Joy, optimism, and companionship."
         },
         "orange": {
-          "interpretatio": "Adventure, enthusiasm, and creativity"
+          "interpretation": "Adventure, enthusiasm, and creativity."
         },
         "blue": {
-          "interpretatio": "Trust, loyalty, and emotional calm"
+          "interpretation": "Trust, loyalty, and emotional calm."
         },
         "purple": {
-          "interpretatio": "Depth, uniqueness, and imagination"
+          "interpretation": "Depth, uniqueness, and imagination."
         },
         "lavender": {
-          "interpretatio": "Gentleness, sensitivity, and peace"
+          "interpretation": "Gentleness, sensitivity, and peace."
         },
         "green": {
-          "interpretatio": "Growth, healing, and harmony"
+          "interpretation": "Growth, healing, and harmony."
         },
         "black": {
-          "interpretatio": "Depth, mystery, and transformation"
+          "interpretation": "Depth, mystery, and transformation."
         },
         "brown": {
-          "interpretatio": "Reliability and grounding"
+          "interpretation": "Reliability and grounding."
         },
         "multicolor": {
-          "interpretatio": "Diversity and variety"
+          "interpretation": "Diversity and variety."
         }
       },
 
       "size": {
         "large": {
-          "interpretation": "Strong influence of friendships"
+          "interpretation": "Strong influence of friendships."
         },
         "small": {
-          "interpretatio": "Private or subtle connections"
+          "interpretation": "Private or subtle connections."
         }
       },
 
       "arrangement": {
         "organized": {
-          "interpretatio": "Intentional relationships"
+          "interpretation": "Intentional relationships."
         },
         "wild": {
-          "interpretatio": "Spontaneous relationships"
+          "interpretation": "Spontaneous relationships."
         },
         "scattered": {
-          "interpretatio": "Independent connections"
+          "interpretation": "Independent connections."
         }
       },
 
       "container": {
         "vase": {
-          "interpretatio": "Maintained and intentional friendships"
+          "interpretation": "Maintained and intentional friendships."
         },
         "ground": {
-          "interpretatio": "Natural and lasting friendships"
+          "interpretation": "Natural and lasting friendships."
         },
         "garden": {
-          "interpretatio": "Community and belonging"
+          "interpretation": "Community and belonging."
         }
       },
 
       "strength": {
         "hardy": {
-          "interpretatio": "Reliable and resilient friendships"
+          "interpretation": "Reliable and resilient friendships."
         },
         "fragile": {
-          "interpretatio": "Sensitive relationships"
+          "interpretation": "Sensitive relationships."
         }
       },
 
       "condition": {
         "healthy": {
-          "interpretatio": "Strong and fulfilling relationships"
+          "interpretation": "Strong and fulfilling relationships."
         },
         "damaged": {
-          "interpretatio": "Relationship difficulties"
+          "interpretation": "Relationship difficulties."
         }
       },
 
       "lifeState": {
         "alive": {
-          "interpretatio": "Active and meaningful friendships"
+          "interpretation": "Active and meaningful friendships."
         },
         "dead": {
-          "interpretatio": "Past relationships or emotional endings"
+          "interpretation": "Past relationships or emotional endings."
         }
       },
 
       "careRequired": {
         "needsCare": {
-          "interpretatio": "Relationship maintenance"
+          "interpretation": "Relationship maintenance."
         },
         "thriving": {
-          "interpretatio": "Healthy connection"
+          "interpretation": "Healthy connection."
         }
       },
 
       "yourFeelings": {
         "positive": {
-          "interpretatio": "Appreciation and connection"
+          "interpretation": "Appreciation and connection."
         },
         "negative": {
-          "interpretatio": "Distance or unresolved emotions"
+          "interpretation": "Distance or unresolved emotions."
         }
       },
 
       "howFlowersFeelAboutYou": {
         "thrivingNearYou": {
-          "interpretatio": "Mutual appreciation"
+          "interpretation": "Mutual appreciation."
         },
         "neglected": {
-          "interpretatio": "Concerns about reciprocity"
+          "interpretation": "Concerns about reciprocity."
         }
       },
 
       "yourRole": {
         "protecting": {
-          "interpretatio": "Nurturing relationships"
+          "interpretation": "Nurturing relationships."
         },
         "caring": {
-          "interpretatio": "Investment and commitment"
+          "interpretation": "Investment and commitment."
         },
         "ignoring": {
-          "interpretatio": "Independence or emotional distance"
+          "interpretation": "Independence or emotional distance."
         }
       }
     }
