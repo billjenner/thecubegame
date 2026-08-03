@@ -166,8 +166,11 @@
         "tall": {
           "interpretation": "Large ambitions and aspirations."
         },
-        "short": {
+        "medium": {
           "interpretation": "Practical and achievable goals."
+        },
+        "short": {
+          "interpretation": "Unsure about your goals. You may feel they are unachievable or have no focus on identified job roles."
         }
       },
 
@@ -334,6 +337,125 @@
         },
         "closed": {
           "interpretation": "Protection and boundaries."
+        }
+      }
+    }
+  },
+
+  "Storm": {
+    "symbol": "Challenges, stress, uncertainty, and major life disruptions",
+    "features": {
+      "location": {
+        "nearCube": {
+          "interpretation": "Challenges that feel personal or directly affect identity."
+        },
+        "farFromCube": {
+          "interpretation": "Challenges viewed as separate from the self."
+        },
+        "overCube": {
+          "interpretation": "Feeling personally overwhelmed or threatened."
+        }
+      },
+
+      "size": {
+        "large": {
+          "interpretation": "Major challenges or powerful emotional pressures."
+        },
+        "small": {
+          "interpretation": "Manageable concerns or limited stress."
+        }
+      },
+
+      "intensity": {
+        "severe": {
+          "interpretation": "Strong emotional pressure or significant life challenges."
+        },
+        "moderate": {
+          "interpretation": "Normal levels of stress and manageable difficulties."
+        },
+        "mild": {
+          "interpretation": "Minor concerns or temporary difficulties."
+        }
+      },
+
+      "distance": {
+        "close": {
+          "interpretation": "Challenges feel immediate and personally relevant."
+        },
+        "far": {
+          "interpretation": "Challenges feel distant, manageable, or under control."
+        },
+        "approaching": {
+          "interpretation": "Anticipation of upcoming difficulties or uncertainty."
+        },
+        "passing": {
+          "interpretation": "Confidence that difficulties are temporary."
+        }
+      },
+
+      "movement": {
+        "movingToward": {
+          "interpretation": "A growing awareness of approaching challenges."
+        },
+        "movingAway": {
+          "interpretation": "Recovery, resolution, or moving beyond difficulties."
+        },
+        "stationary": {
+          "interpretation": "An ongoing or persistent challenge."
+        }
+      },
+
+      "weather": {
+        "dark": {
+          "interpretation": "Uncertainty, worry, or emotional heaviness."
+        },
+        "light": {
+          "interpretation": "Hope, clarity, and confidence despite challenges."
+        },
+        "rain": {
+          "interpretation": "Emotional release, sadness, or cleansing."
+        },
+        "lightning": {
+          "interpretation": "Sudden change, conflict, insight, or disruption."
+        },
+        "wind": {
+          "interpretation": "Instability, change, or forces outside your control."
+        },
+        "thunder": {
+          "interpretation": "Strong emotional impact, warning, or confrontation."
+        }
+      },
+
+      "relationshipToCube": {
+        "blocking": {
+          "interpretation": "Challenges perceived as interfering with personal goals or identity."
+        },
+        "behind": {
+          "interpretation": "Past difficulties or challenges that have been overcome."
+        },
+        "beside": {
+          "interpretation": "Challenges existing alongside everyday life."
+        },
+        "above": {
+          "interpretation": "Feeling pressured or overshadowed by circumstances."
+        }
+      },
+
+      "yourFeeling": {
+        "calm": {
+          "interpretation": "Resilience, emotional stability, and confidence in handling adversity."
+        },
+        "concerned": {
+          "interpretation": "Awareness of challenges and a desire to prepare."
+        },
+        "afraid": {
+          "interpretation": "Feeling vulnerable or uncertain about difficult circumstances."
+        },
+        "excited": {
+          "interpretation": "Viewing change and uncertainty as opportunities for growth."
+        },
+        "indifferent": {
+          "interpretation": "Emotional distance from challenges or acceptance of uncertainty."
         }
       }
     }
