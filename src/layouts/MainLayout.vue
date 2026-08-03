@@ -45,12 +45,24 @@
           @mouseleave="hoveredPath = null"
         />
         <q-btn
+          v-if="!(usersStore.currentUser && usersStore.currentUser.email)"
           flat
-          label="Login"
+          label="LOGIN"
           to="/login"
           class="q-mx-sm"
           style="min-width: 172px"
           :style="buttonStyle('/login')"
+          @mouseover="hoveredPath = '/login'"
+          @mouseleave="hoveredPath = null"
+        />
+        <q-btn
+          v-else
+          flat
+          label="LOG OFF"
+          class="q-mx-sm"
+          style="min-width: 172px"
+          :style="buttonStyle('/login')"
+          @click="logOff"
           @mouseover="hoveredPath = '/login'"
           @mouseleave="hoveredPath = null"
         />
@@ -89,6 +101,11 @@ function navigate(path) {
   }
 
   router.push(path)
+}
+
+function logOff() {
+  usersStore.clearCurrentUser()
+  router.push('/login')
 }
 
 function buttonStyle(path) {
