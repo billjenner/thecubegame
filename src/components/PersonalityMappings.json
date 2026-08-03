@@ -355,24 +355,15 @@
         }
       },
 
-      "distanceFromCube": {
-        "close": {
-          "interpretatio": "Friendships closely connected to identity"
-        },
-        "far": {
-          "interpretatio": "Independence within friendships"
-        },
-        "touching": {
-          "interpretatio": "Deep emotional connection"
-        }
-      },
-
-      "distanceFromRoom": {
+      "distance": {
         "near": {
           "interpretatio": "Accessible and active relationships"
         },
         "far": {
           "interpretatio": "Independent or distant relationships"
+        },
+        "touching": {
+          "interpretatio": "Deep emotional connection"
         }
       },
 
