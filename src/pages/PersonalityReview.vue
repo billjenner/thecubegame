@@ -203,17 +203,19 @@ async function loadAnswers() {
   }
 
   const userMap = new Map((store.users || []).map((user) => [user.email?.toLowerCase(), user]))
+  const currentEmail = store.currentUser?.email?.toLowerCase()
   const enrichedRows = []
 
   for (const answer of data || []) {
     const user = userMap.get(answer.email?.toLowerCase()) || {}
+    const isCurrentUserRow = answer.email?.toLowerCase() === currentEmail
     const explanations = await ensureExplanations(answer)
 
     enrichedRows.push({
       id: `${answer.email}-${answer.date_time}`,
       email: answer.email,
-      fname: user.fname || '',
-      lname: user.lname || '',
+      fname: isCurrentUserRow ? user.fname || '' : '---',
+      lname: isCurrentUserRow ? user.lname || '' : '---',
       expand: false,
       ...answer,
       ...explanations,
@@ -221,7 +223,10 @@ async function loadAnswers() {
     })
   }
 
-  rows.value = enrichedRows
+  const currentUserRows = enrichedRows.filter((row) => row.email?.toLowerCase() === currentEmail)
+  const otherRows = enrichedRows.filter((row) => row.email?.toLowerCase() !== currentEmail)
+
+  rows.value = [...currentUserRows, ...otherRows]
 }
 
 onMounted(async () => {

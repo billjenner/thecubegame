@@ -60,6 +60,15 @@
     <q-page-container>
       <router-view />
     </q-page-container>
+    <q-footer class="bg-primary text-white q-pa-sm">
+      <div class="row items-center justify-end">
+        <div v-if="usersStore.currentUser && usersStore.currentUser.email">
+          Current User: {{ usersStore.currentUser.fname }} {{ usersStore.currentUser.lname }} -
+          {{ usersStore.currentUser.email }}
+        </div>
+        <div v-else class="text-caption">Not logged in</div>
+      </div>
+    </q-footer>
   </q-layout>
 </template>
 

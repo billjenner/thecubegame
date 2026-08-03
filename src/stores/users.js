@@ -183,11 +183,7 @@ export const useUsersStore = defineStore('Users', {
       const explanations = await generateAnswerExplanation(answers)
       const payload = buildAnswerPayload(this.currentUser.email, answers, explanations, currentTime)
 
-      const { data, error } = await supabase
-        .from('answers')
-        .upsert(payload, { onConflict: 'email' })
-        .select()
-        .single()
+      const { data, error } = await supabase.from('answers').insert(payload).select().single()
 
       if (error) {
         this.error = error.message
