@@ -63,11 +63,7 @@
                         >
                           <div
                             v-if="!field.key.includes('explanation')"
-                            :class="
-                              field.key.includes('explanation')
-                                ? 'text-caption text-white-7'
-                                : 'text-caption text-grey-7'
-                            "
+                            class="text-subtitle2 text-grey-7"
                           >
                             {{ field.label }}
                           </div>
