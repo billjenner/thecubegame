@@ -45,6 +45,7 @@ export const useUsersStore = defineStore('Users', {
     currentUser: null,
     answers: [],
     error: null,
+    activeAnswerId: null,
     activeAnswerDateTime: null,
   }),
 
@@ -213,6 +214,7 @@ export const useUsersStore = defineStore('Users', {
         return null
       }
 
+      this.activeAnswerId = data?.ID || null
       this.activeAnswerDateTime = data?.date_time || currentTime
 
       this.answers = this.answers.filter((item) => item.email !== this.currentUser.email)
@@ -247,7 +249,19 @@ export const useUsersStore = defineStore('Users', {
       let data = null
       let error = null
 
-      if (this.activeAnswerDateTime) {
+      if (this.activeAnswerId) {
+        const updateResult = await supabase
+          .from('answers')
+          .update(payload)
+          .eq('ID', this.activeAnswerId)
+          .select()
+          .maybeSingle()
+
+        data = updateResult.data
+        error = updateResult.error
+      }
+
+      if (!data && !error && this.activeAnswerDateTime) {
         const updateResult = await supabase
           .from('answers')
           .update(payload)
@@ -284,6 +298,7 @@ export const useUsersStore = defineStore('Users', {
         return null
       }
 
+      this.activeAnswerId = data?.ID || this.activeAnswerId
       this.activeAnswerDateTime = data?.date_time || targetDateTime
 
       this.answers = this.answers.filter((item) => item.email !== this.currentUser.email)
@@ -293,6 +308,7 @@ export const useUsersStore = defineStore('Users', {
 
     clearCurrentUser() {
       this.currentUser = null
+      this.activeAnswerId = null
       this.activeAnswerDateTime = null
     },
   },
