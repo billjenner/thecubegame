@@ -1,21 +1,34 @@
 <template>
-  <q-page class="q-pa-md">
+  <q-page class="q-pa-md review-page">
     <div class="q-mx-auto" style="max-width: 96vw; width: 96%">
       <div class="text-h5 text-center q-mb-md">Personality Review</div>
 
       <q-card>
         <q-card-section>
-          <div class="row items-center justify-between q-mb-sm">
+          <div
+            :class="
+              isNarrowScreen
+                ? 'column items-stretch q-gutter-sm q-mb-sm'
+                : 'row items-center justify-between q-mb-sm'
+            "
+          >
             <div class="text-subtitle1">Saved responses</div>
-            <q-btn color="primary" label="Refresh" @click="loadAnswers" />
+            <q-btn
+              color="primary"
+              label="Refresh"
+              :class="isNarrowScreen ? 'full-width' : ''"
+              @click="loadAnswers"
+            />
           </div>
 
           <q-table
             :rows="rows"
             :columns="columns"
+            :visible-columns="visibleColumns"
             row-key="id"
             flat
             bordered
+            :dense="isNarrowScreen"
             :rows-per-page-options="[10, 50]"
           >
             <template #body="props">
@@ -34,8 +47,8 @@
                   v-for="col in props.cols.filter((col) => col.name !== 'expand')"
                   :key="col.name"
                   :props="props"
-                  class="wrap-content"
-                  style="white-space: normal; word-break: break-word; max-width: 280px"
+                  :class="['wrap-content', col.name === 'fname' ? 'fname-col' : '']"
+                  style="white-space: normal; word-break: break-word"
                 >
                   {{ col.value }}
                 </q-td>
@@ -89,15 +102,19 @@
 </template>
 
 <script setup>
-import { onMounted, ref } from 'vue'
+import { computed, onMounted, ref } from 'vue'
 import { supabase } from '../lib/supabase'
 import { useUsersStore } from 'stores/users'
 import { generateAnswerExplanation } from '../utils/interpretAnswers'
 import { useRouter } from 'vue-router'
+import { useQuasar } from 'quasar'
 
 const store = useUsersStore()
 const rows = ref([])
 const router = useRouter()
+const $q = useQuasar()
+const isNarrowScreen = computed(() => $q.screen.width <= 412)
+const visibleColumns = ['expand', 'fname', 'lname', 'date_time']
 
 const columns = [
   { name: 'expand', label: '', field: 'expand', sortable: false, align: 'left' },
@@ -239,3 +256,26 @@ onMounted(async () => {
   await loadAnswers()
 })
 </script>
+
+<style scoped>
+@media (max-width: 412px) {
+  .review-page .wrap-content {
+    max-width: 132px;
+    font-size: 0.84rem;
+  }
+
+  .review-page .fname-col {
+    min-width: 56px;
+    max-width: 56px;
+    width: 56px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .review-page :deep(.q-table th),
+  .review-page :deep(.q-table td) {
+    padding: 6px 4px;
+  }
+}
+</style>

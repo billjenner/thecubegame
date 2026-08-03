@@ -9,7 +9,7 @@
     <h6
       style="
         max-width: 75vw;
-        margin: 2 auto 16px;
+        margin: 2 auto 12px;
         text-align: justify;
         font-size: 1.05rem;
         line-height: 1.6;
@@ -23,7 +23,7 @@
     <h6
       style="
         max-width: 75vw;
-        margin: 2 auto 16px;
+        margin: 2 auto 12px;
         text-align: justify;
         font-size: 1.05rem;
         line-height: 1.6;
@@ -34,9 +34,6 @@
       this very famous one to try! It’s called “The Cube”. This test was said to have been created
       by a psychologist from Japan.
     </h6>
-
-    <div style="flex: 1 1 auto; min-height: 96px; width: 100%"></div>
-
     <div class="q-pa-md text-center" style="max-width: 720px; width: 100%; margin-top: 16px">
       <h4 class="q-mb-sm">Personality Review</h4>
       <p class="text-body1 q-mb-md">
