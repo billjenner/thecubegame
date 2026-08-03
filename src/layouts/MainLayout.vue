@@ -17,20 +17,20 @@
         <q-btn
           flat
           label="Personality Test"
-          to="/analyze"
           class="q-mx-sm"
           style="min-width: 172px"
           :style="buttonStyle('/analyze')"
+          @click="navigate('/analyze')"
           @mouseover="hoveredPath = '/analyze'"
           @mouseleave="hoveredPath = null"
         />
         <q-btn
           flat
           label="PERSONALITY REVIEW"
-          to="/personality-review"
           class="q-mx-sm"
           style="min-width: 172px"
           :style="buttonStyle('/personality-review')"
+          @click="navigate('/personality-review')"
           @mouseover="hoveredPath = '/personality-review'"
           @mouseleave="hoveredPath = null"
         />
@@ -65,10 +65,22 @@
 
 <script setup>
 import { ref } from 'vue'
-import { useRoute } from 'vue-router'
+import { useRoute, useRouter } from 'vue-router'
+import { useUsersStore } from 'stores/users'
 
 const route = useRoute()
 const hoveredPath = ref(null)
+const usersStore = useUsersStore()
+const router = useRouter()
+
+function navigate(path) {
+  if (!(usersStore.currentUser && usersStore.currentUser.email)) {
+    router.push('/login')
+    return
+  }
+
+  router.push(path)
+}
 
 function buttonStyle(path) {
   if (route.path === path) {

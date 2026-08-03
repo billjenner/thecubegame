@@ -173,7 +173,7 @@
 </template>
 
 <script setup>
-import { ref } from 'vue'
+import { ref, onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { useUsersStore } from 'stores/users'
 
@@ -191,6 +191,12 @@ const answers = ref({
   window: '',
   storm: '',
   flowers: '',
+})
+
+onMounted(() => {
+  if (!store.currentUser || !store.currentUser.email) {
+    router.push('/login')
+  }
 })
 
 async function startTest() {

@@ -30,15 +30,15 @@
           <q-btn
             flat
             color="accent"
-            label="Create User"
-            to="/create-login"
+            label="Forgot Password"
+            to="/forgot-password"
             class="col text-caption"
           />
           <q-btn
             flat
             color="accent"
-            label="Forgot Password"
-            to="/forgot-password"
+            label="Create User"
+            to="/create-login"
             class="col text-caption"
           />
         </div>
@@ -54,17 +54,33 @@
 
 <script setup>
 import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import { useUsersStore } from 'stores/users'
 
 const email = ref('')
 const password = ref('')
 const message = ref('')
 const messageClass = ref('text-positive')
 
-function handleSubmit() {
+const router = useRouter()
+const store = useUsersStore()
+
+async function handleSubmit() {
   if (!email.value.trim() || !password.value) {
-    message.value = 'Please enter email, and password'
+    message.value = 'Please enter email and password.'
     messageClass.value = 'text-negative'
     return
+  }
+
+  const result = await store.loginUser(email.value, password.value)
+
+  if (result) {
+    message.value = `Logged in as ${store.currentUser?.email}`
+    messageClass.value = 'text-positive'
+    router.push('/')
+  } else {
+    message.value = store.error || 'Unable to log in.'
+    messageClass.value = 'text-negative'
   }
 }
 </script>

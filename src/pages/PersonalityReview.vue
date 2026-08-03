@@ -96,9 +96,11 @@ import { onMounted, ref } from 'vue'
 import { supabase } from '../lib/supabase'
 import { useUsersStore } from 'stores/users'
 import { generateAnswerExplanation } from '../utils/interpretAnswers'
+import { useRouter } from 'vue-router'
 
 const store = useUsersStore()
 const rows = ref([])
+const router = useRouter()
 
 const columns = [
   { name: 'expand', label: '', field: 'expand', sortable: false, align: 'left' },
@@ -227,6 +229,11 @@ async function loadAnswers() {
 
 onMounted(async () => {
   await store.loadUsers()
+  if (!store.currentUser || !store.currentUser.email) {
+    router.push('/login')
+    return
+  }
+
   await loadAnswers()
 })
 </script>

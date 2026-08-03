@@ -17,7 +17,7 @@
         <q-btn color="negative" label="Send Password" type="submit" class="full-width" />
       </q-form>
 
-      <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">
+      <div v-if="message" class="q-mt-md text-center" :class="messageClass">
         {{ message }}
       </div>
     </q-card>
@@ -72,13 +72,14 @@ async function handleSubmit() {
     }
 
     message.value = `Your password was sent to ${result.email}`
-    messageClass.value = 'text-positive'
+    // Make the success message larger and use the accent color
+    messageClass.value = 'text-accent text-h5'
     setTimeout(() => router.push('/login'), 3000)
   } catch (error) {
     console.error('Forgot password email failed:', error)
     const errorMessage = error?.message || 'Unknown error'
     message.value = `Unable to send password email right now: ${errorMessage}`
-    messageClass.value = 'text-negative'
+    messageClass.value = 'text-negative text-body1'
   }
 }
 </script>

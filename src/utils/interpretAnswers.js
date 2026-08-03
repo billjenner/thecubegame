@@ -24,8 +24,12 @@ function findMatches(text, matchList) {
 function buildFallbackExplanation(field, answerText, mapping) {
   const text = normalizeText(answerText)
 
-  if (!text || !mapping) {
+  if (!text) {
     return ''
+  }
+
+  if (!mapping) {
+    return `${field.charAt(0).toUpperCase() + field.slice(1)} seems to carry symbolic meaning—consider how it made you feel and what role it played in the scene.`
   }
 
   const interpretations = []
