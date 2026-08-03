@@ -42,6 +42,12 @@
       <p class="text-body1 q-mb-md">
         This interview process is now available and ready for your personality review experience.
       </p>
+      <q-btn
+        color="secondary"
+        label="Personality Test Now"
+        to="/analyze"
+        style="margin-top: 16px"
+      />
     </div>
   </q-page>
 </template>
