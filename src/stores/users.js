@@ -2,6 +2,22 @@ import { defineStore, acceptHMRUpdate } from 'pinia'
 import { supabase } from '../lib/supabase'
 import { generateAnswerExplanation } from '../utils/interpretAnswers'
 
+function trimAnswer(value) {
+  return String(value || '').trim()
+}
+
+function normalizeAnswers(answers) {
+  return {
+    room: trimAnswer(answers?.room),
+    cube: trimAnswer(answers?.cube),
+    ladder: trimAnswer(answers?.ladder),
+    horse: trimAnswer(answers?.horse),
+    window: trimAnswer(answers?.window),
+    storm: trimAnswer(answers?.storm),
+    flowers: trimAnswer(answers?.flowers),
+  }
+}
+
 function buildAnswerPayload(email, answers, explanations, currentTime) {
   return {
     email,
@@ -29,6 +45,7 @@ export const useUsersStore = defineStore('Users', {
     currentUser: null,
     answers: [],
     error: null,
+    activeAnswerDateTime: null,
   }),
 
   actions: {
@@ -180,8 +197,14 @@ export const useUsersStore = defineStore('Users', {
       }
 
       const currentTime = new Date().toISOString()
-      const explanations = await generateAnswerExplanation(answers)
-      const payload = buildAnswerPayload(this.currentUser.email, answers, explanations, currentTime)
+      const normalizedAnswers = normalizeAnswers(answers)
+      const explanations = await generateAnswerExplanation(normalizedAnswers)
+      const payload = buildAnswerPayload(
+        this.currentUser.email,
+        normalizedAnswers,
+        explanations,
+        currentTime,
+      )
 
       const { data, error } = await supabase.from('answers').insert(payload).select().single()
 
@@ -189,6 +212,8 @@ export const useUsersStore = defineStore('Users', {
         this.error = error.message
         return null
       }
+
+      this.activeAnswerDateTime = data?.date_time || currentTime
 
       this.answers = this.answers.filter((item) => item.email !== this.currentUser.email)
       this.answers.push(data)
@@ -209,19 +234,44 @@ export const useUsersStore = defineStore('Users', {
       }
 
       const currentTime = new Date().toISOString()
-      const explanations = await generateAnswerExplanation(answers)
-      const payload = buildAnswerPayload(this.currentUser.email, answers, explanations, currentTime)
+      const normalizedAnswers = normalizeAnswers(answers)
+      const explanations = await generateAnswerExplanation(normalizedAnswers)
+      const targetDateTime = this.activeAnswerDateTime || currentTime
+      const payload = buildAnswerPayload(
+        this.currentUser.email,
+        normalizedAnswers,
+        explanations,
+        targetDateTime,
+      )
 
-      const { data, error } = await supabase
-        .from('answers')
-        .upsert(payload, { onConflict: 'email' })
-        .select()
-        .single()
+      let data = null
+      let error = null
+
+      if (this.activeAnswerDateTime) {
+        const updateResult = await supabase
+          .from('answers')
+          .update(payload)
+          .eq('email', this.currentUser.email)
+          .eq('date_time', this.activeAnswerDateTime)
+          .select()
+          .maybeSingle()
+
+        data = updateResult.data
+        error = updateResult.error
+      }
+
+      if (!data && !error) {
+        const insertResult = await supabase.from('answers').insert(payload).select().single()
+        data = insertResult.data
+        error = insertResult.error
+      }
 
       if (error) {
         this.error = error.message
         return null
       }
+
+      this.activeAnswerDateTime = data?.date_time || targetDateTime
 
       this.answers = this.answers.filter((item) => item.email !== this.currentUser.email)
       this.answers.push(data)
@@ -230,6 +280,7 @@ export const useUsersStore = defineStore('Users', {
 
     clearCurrentUser() {
       this.currentUser = null
+      this.activeAnswerDateTime = null
     },
   },
 })

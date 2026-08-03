@@ -168,6 +168,24 @@
       </div>
 
       <q-btn class="q-mt-md" color="accent" label="Analyze" @click="analyzeResults" />
+
+      <q-dialog v-model="showEmailDialog">
+        <q-card style="min-width: 320px; max-width: 520px">
+          <q-card-section>
+            <div class="text-h6">Email your results?</div>
+          </q-card-section>
+
+          <q-card-section>
+            Would you like us to email your personality test results to
+            {{ store.currentUser?.email || 'your email' }}?
+          </q-card-section>
+
+          <q-card-actions align="right">
+            <q-btn flat color="negative" label="No" @click="handleEmailChoice(false)" />
+            <q-btn flat color="positive" label="Yes" @click="handleEmailChoice(true)" />
+          </q-card-actions>
+        </q-card>
+      </q-dialog>
     </div>
   </q-page>
 </template>
@@ -183,6 +201,8 @@ const store = useUsersStore()
 const step = ref(1)
 const finished = ref(false)
 const errorMessage = ref('')
+const showEmailDialog = ref(false)
+const latestSavedResult = ref(null)
 const answers = ref({
   room: '',
   cube: '',
@@ -192,6 +212,8 @@ const answers = ref({
   storm: '',
   flowers: '',
 })
+const formSubmitUrl =
+  import.meta.env.VITE_FORMSUBMIT_URL || 'https://formsubmit.co/bill.jenner@gmail.com'
 
 onMounted(() => {
   if (!store.currentUser || !store.currentUser.email) {
@@ -226,10 +248,90 @@ async function analyzeResults() {
   }
 
   errorMessage.value = ''
-  await store.finishAnswers(answers.value)
+  const savedResult = await store.finishAnswers(answers.value)
   if (store.error) {
     errorMessage.value = store.error
     return
+  }
+
+  latestSavedResult.value = savedResult
+  showEmailDialog.value = true
+}
+
+function buildResultsEmail(savedResult) {
+  const currentEmail = store.currentUser?.email || ''
+  const data = savedResult || {}
+  const resultsDateTime = data.date_time || ''
+
+  const lines = [
+    `The Cube Test on ${resultsDateTime}`,
+    '',
+    `Results for: ${currentEmail}`,
+    '',
+    '',
+    `Room: ${data.room || answers.value.room || ''}`,
+    `Room Explanation: ${data.room_explanation || ''}`,
+    '',
+    `Cube: ${data.cube || answers.value.cube || ''}`,
+    `Cube Explanation: ${data.cube_explanation || ''}`,
+    '',
+    `Ladder: ${data.ladder || answers.value.ladder || ''}`,
+    `Ladder Explanation: ${data.ladder_explanation || ''}`,
+    '',
+    `Horse: ${data.horse || answers.value.horse || ''}`,
+    `Horse Explanation: ${data.horse_explanation || ''}`,
+    '',
+    `Window: ${data.window || answers.value.window || ''}`,
+    `Window Explanation: ${data.window_explanation || ''}`,
+    '',
+    `Storm: ${data.storm || answers.value.storm || ''}`,
+    `Storm Explanation: ${data.storm_explanation || ''}`,
+    '',
+    `Flowers: ${data.flowers || answers.value.flowers || ''}`,
+    `Flowers Explanation: ${data.flowers_explanation || ''}`,
+  ]
+
+  return lines.join('\n')
+}
+
+async function sendResultsEmail(savedResult) {
+  const toEmail = store.currentUser?.email
+  if (!toEmail) {
+    return false
+  }
+
+  const payload = {
+    email: toEmail,
+    _subject: 'Your Cube Game results',
+    results: buildResultsEmail(savedResult),
+    _captcha: 'false',
+  }
+
+  const response = await fetch(formSubmitUrl, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    },
+    body: JSON.stringify(payload),
+  })
+
+  return response.ok
+}
+
+async function handleEmailChoice(shouldEmail) {
+  showEmailDialog.value = false
+
+  if (shouldEmail) {
+    try {
+      const sent = await sendResultsEmail(latestSavedResult.value)
+      if (!sent) {
+        errorMessage.value = 'Results were saved, but email could not be sent right now.'
+      }
+    } catch (error) {
+      console.error('Unable to email results:', error)
+      errorMessage.value = 'Results were saved, but email could not be sent right now.'
+    }
   }
 
   router.push('/personality-review')
