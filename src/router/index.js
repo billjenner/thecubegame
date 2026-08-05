@@ -9,7 +9,8 @@ import routes from './routes'
 
 const defaultSeo = {
   title: 'The Cube Game',
-  description: 'Explore The Cube Game, an interactive personality experience with guided reflections and saved results.',
+  description:
+    'Explore The Cube Game, an interactive personality experience with guided reflections and saved results.',
   image: '/icons/icon-512x512.png',
   type: 'website',
   robots: 'index,follow',
