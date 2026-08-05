@@ -159,15 +159,16 @@
         </q-step>
       </q-stepper>
 
-      <div v-if="finished" class="q-mt-md q-pa-md bg-positive text-white rounded-borders">
-        Thanks! You have completed the cube questionnaire.
+      <div v-if="finished" class="q-mt-md row items-center justify-between q-gutter-sm">
+        <div class="q-pa-md bg-positive text-white rounded-borders">
+          Thanks! You have completed the cube questionnaire.
+        </div>
+        <q-btn color="accent" label="Analyze" @click="analyzeResults" />
       </div>
 
       <div v-if="errorMessage" class="q-mt-md text-negative">
         {{ errorMessage }}
       </div>
-
-      <q-btn class="q-mt-md" color="accent" label="Analyze" @click="analyzeResults" />
 
       <q-dialog v-model="showEmailDialog">
         <q-card style="min-width: 320px; max-width: 520px">

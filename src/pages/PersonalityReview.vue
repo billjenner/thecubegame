@@ -36,10 +36,10 @@
                 <q-td auto-width>
                   <q-btn
                     size="sm"
-                    flat
+                    color="accent"
                     dense
                     round
-                    :icon="isExpanded(props.row) ? 'keyboard_arrow_up' : 'keyboard_arrow_down'"
+                    :icon="isExpanded(props.row) ? 'remove' : 'add'"
                     @click="toggleExpanded(props.row)"
                   />
                 </q-td>

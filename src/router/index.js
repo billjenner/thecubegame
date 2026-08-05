@@ -7,6 +7,63 @@ import {
 } from 'vue-router'
 import routes from './routes'
 
+const defaultSeo = {
+  title: 'The Cube Game',
+  description: 'Explore The Cube Game, an interactive personality experience with guided reflections and saved results.',
+  image: '/icons/icon-512x512.png',
+  type: 'website',
+  robots: 'index,follow',
+  themeColor: '#027be3',
+}
+
+function applySeoMeta(route) {
+  const seo = { ...defaultSeo, ...(route.meta?.seo || {}) }
+  const title = seo.title ? `${seo.title} | The Cube Game` : defaultSeo.title
+  const description = seo.description || defaultSeo.description
+  const canonicalPath = seo.canonicalPath || route.path || '/'
+  const origin =
+    typeof window !== 'undefined' && window.location?.origin
+      ? window.location.origin
+      : 'https://thecubegame.com'
+  const canonicalUrl = `${origin}${canonicalPath === '/' ? '/' : `/${canonicalPath.replace(/^\/+/, '').replace(/\/+$/, '')}`}`
+
+  document.title = title
+
+  const setMeta = (key, content, attribute = 'name') => {
+    let tag = document.head.querySelector(`meta[${attribute}="${key}"]`)
+
+    if (!tag) {
+      tag = document.createElement('meta')
+      tag.setAttribute(attribute, key)
+      document.head.appendChild(tag)
+    }
+
+    tag.setAttribute('content', content)
+  }
+
+  setMeta('description', description)
+  setMeta('robots', seo.robots || defaultSeo.robots)
+  setMeta('theme-color', seo.themeColor || defaultSeo.themeColor)
+  setMeta('og:title', seo.title || defaultSeo.title, 'property')
+  setMeta('og:description', description, 'property')
+  setMeta('og:type', seo.type || defaultSeo.type, 'property')
+  setMeta('og:image', seo.image || defaultSeo.image, 'property')
+  setMeta('og:url', canonicalUrl, 'property')
+  setMeta('twitter:card', seo.twitterCard || 'summary_large_image', 'property')
+  setMeta('twitter:title', seo.title || defaultSeo.title, 'property')
+  setMeta('twitter:description', description, 'property')
+  setMeta('twitter:image', seo.image || defaultSeo.image, 'property')
+
+  let canonical = document.head.querySelector('link[rel="canonical"]')
+  if (!canonical) {
+    canonical = document.createElement('link')
+    canonical.setAttribute('rel', 'canonical')
+    document.head.appendChild(canonical)
+  }
+
+  canonical.setAttribute('href', canonicalUrl)
+}
+
 /*
  * If not building with SSR mode, you can
  * directly export the Router instantiation;
@@ -32,6 +89,7 @@ export default defineRouter(async (/* { store, ssrContext } */) => {
     // quasar.conf.js -> build -> publicPath
     history: createHistory(process.env.VUE_ROUTER_BASE),
   })
+
   // Navigation guard to protect certain routes when user not logged in
   try {
     const { useUsersStore } = await import('../stores/users')
@@ -45,11 +103,18 @@ export default defineRouter(async (/* { store, ssrContext } */) => {
         return next('/login')
       }
 
+      applySeoMeta(to)
       return next()
     })
   } catch {
     // If store cannot be loaded, skip adding the guard and rely on UI-level checks
+    Router.beforeEach((to, from, next) => {
+      applySeoMeta(to)
+      return next()
+    })
   }
+
+  applySeoMeta(Router.currentRoute.value)
 
   return Router
 })
