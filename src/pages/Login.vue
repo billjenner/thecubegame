@@ -37,8 +37,8 @@
         </div>
 
         <div class="row justify-center q-gutter-sm q-mt-sm full-width">
-          <q-btn flat color="accent" label="Forgot Password" to="/forgot-password" />
-          <q-btn flat color="accent" label="Create User" to="/create-login" />
+          <q-btn flat color="secondary" label="Forgot Password" to="/forgot-password" />
+          <q-btn flat color="secondary" label="Create User" to="/create-login" />
         </div>
       </q-form>
 
