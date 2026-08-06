@@ -22,7 +22,7 @@
             When you are ready to begin this visualization exercise, continue to the next step.
           </div>
           <q-stepper-navigation>
-            <q-btn @click="startTest" color="secondary" label="Continue" />
+            <q-btn @click="startGame" color="secondary" label="Continue" />
           </q-stepper-navigation>
         </q-step>
 
@@ -153,7 +153,7 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn color="secondary" label="Finish" @click="finishTest" />
+            <q-btn color="secondary" label="Finish" @click="finishGame" />
             <q-btn flat @click="step = 7" color="secondary" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
@@ -222,7 +222,7 @@ onMounted(() => {
   }
 })
 
-async function startTest() {
+async function startGame() {
   step.value = 2
   await store.saveAnswers(answers.value)
   if (store.error) {
@@ -230,8 +230,7 @@ async function startTest() {
   }
 }
 
-async function finishTest() {
-  finished.value = true
+async function finishGame() {
   await store.finishAnswers(answers.value)
   if (store.error) {
     errorMessage.value = store.error

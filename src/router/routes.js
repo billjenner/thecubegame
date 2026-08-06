@@ -28,15 +28,19 @@ const routes = [
       },
       {
         path: 'analyze',
-        component: () => import('pages/PersonalityTest.vue'),
+        component: () => import('pages/PersonalityGame.vue'),
         meta: {
           seo: {
             title: 'Analyze your personality',
             description:
-              'Take the interactive personality test and see how your answers are interpreted.',
+              'Play the interactive personality Game and see how your answers are interpreted.',
             canonicalPath: '/analyze',
           },
         },
+      },
+      {
+        path: 'personality-game',
+        redirect: '/analyze',
       },
       {
         path: 'theary',

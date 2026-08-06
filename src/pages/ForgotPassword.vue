@@ -27,10 +27,12 @@
 <script setup>
 import { ref } from 'vue'
 import { useRouter } from 'vue-router'
+import { useQuasar } from 'quasar'
 import { useUsersStore } from 'stores/users'
 
 const router = useRouter()
 const store = useUsersStore()
+const $q = useQuasar()
 
 const email = ref('')
 const message = ref('')
@@ -71,9 +73,19 @@ async function handleSubmit() {
       throw new Error('Unable to send password email right now.')
     }
 
-    message.value = `Your password was sent to ${result.email}`
-    // Make the success message larger and use the accent color
-    messageClass.value = 'text-accent text-h5'
+    $q.notify({
+      color: 'accent',
+      textColor: 'white',
+      message: `Your password was sent to ${result.email}`,
+      timeout: 30000,
+      actions: [
+        {
+          label: 'X',
+          color: 'white',
+          handler: () => {},
+        },
+      ],
+    })
     setTimeout(() => router.push('/login'), 3000)
   } catch (error) {
     console.error('Forgot password email failed:', error)

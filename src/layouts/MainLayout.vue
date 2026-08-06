@@ -25,7 +25,7 @@
           />
           <q-btn
             flat
-            label="Personality Test"
+            label="Personality Game"
             class="q-mx-sm"
             style="min-width: 172px"
             :style="buttonStyle('/analyze')"
@@ -85,7 +85,7 @@
           <q-item-section>Intro</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="navigateAndClose('/analyze')">
-          <q-item-section>Personality Test</q-item-section>
+          <q-item-section>Personality Game</q-item-section>
         </q-item>
         <q-item clickable v-ripple @click="navigateAndClose('/personality-review')">
           <q-item-section>Personality Review</q-item-section>

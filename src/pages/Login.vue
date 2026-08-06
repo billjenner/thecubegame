@@ -3,7 +3,7 @@
     <q-card class="q-pa-lg" style="width: min(100%, 420px)">
       <div class="text-h5 text-center q-mb-md">Login</div>
 
-      <q-form @submit.prevent="handleSubmit" class="q-gutter-md">
+      <q-form @submit.prevent="handleSubmit" class="q-gutter-y-md full-width">
         <q-input
           v-model="email"
           label="Email"
@@ -32,23 +32,13 @@
           </template>
         </q-input>
 
-        <q-btn color="primary" label="Log In" type="submit" class="full-width" />
+        <div class="full-width">
+          <q-btn color="primary" label="Log In" type="submit" class="full-width" />
+        </div>
 
-        <div class="row q-col-gutter-sm q-mt-sm">
-          <q-btn
-            flat
-            color="accent"
-            label="Forgot Password"
-            to="/forgot-password"
-            class="col text-caption"
-          />
-          <q-btn
-            flat
-            color="accent"
-            label="Create User"
-            to="/create-login"
-            class="col text-caption"
-          />
+        <div class="row justify-center q-gutter-sm q-mt-sm full-width">
+          <q-btn flat color="accent" label="Forgot Password" to="/forgot-password" />
+          <q-btn flat color="accent" label="Create User" to="/create-login" />
         </div>
         <!-- <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" /> -->
       </q-form>

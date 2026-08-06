@@ -3,7 +3,7 @@
     <q-card class="q-pa-lg" style="width: min(100%, 460px)">
       <div class="text-h5 text-center q-mb-md">Create User</div>
 
-      <q-form @submit.prevent="handleSubmit" class="q-gutter-md">
+      <q-form @submit.prevent="handleSubmit" class="q-gutter-y-md full-width">
         <q-input
           v-model="fname"
           label="First Name"
@@ -40,7 +40,9 @@
           :rules="[(val) => !!val || 'Password is required']"
         />
 
-        <q-btn color="primary" label="Create User" type="submit" class="full-width" />
+        <div class="full-width">
+          <q-btn color="primary" label="Create User" type="submit" class="full-width" />
+        </div>
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">
