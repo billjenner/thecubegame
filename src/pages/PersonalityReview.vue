@@ -30,7 +30,7 @@
                 <q-td auto-width>
                   <q-btn
                     size="sm"
-                    color="accent"
+                    color="secondary"
                     dense
                     round
                     :icon="isExpanded(props.row) ? 'remove' : 'add'"
@@ -58,9 +58,7 @@
                           :key="field.key"
                           class="q-pa-sm rounded-borders"
                           :class="
-                            field.key.includes('explanation')
-                              ? 'bg-secondary text-white'
-                              : 'bg-white'
+                            field.key.includes('explanation') ? 'bg-accent text-white' : 'bg-white'
                           "
                           :style="
                             field.key.includes('explanation')

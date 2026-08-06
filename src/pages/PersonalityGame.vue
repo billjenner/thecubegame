@@ -22,7 +22,7 @@
             When you are ready to begin this visualization exercise, continue to the next step.
           </div>
           <q-stepper-navigation>
-            <q-btn @click="startGame" color="secondary" label="Continue" />
+            <q-btn @click="startGame" color="accent" label="Continue" />
           </q-stepper-navigation>
         </q-step>
 
@@ -34,8 +34,8 @@
           </div>
           <q-input v-model="answers.room" type="textarea" outlined autogrow label="Your response" />
           <q-stepper-navigation>
-            <q-btn @click="step = 3" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 1" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 3" color="accent" label="Continue" />
+            <q-btn flat @click="step = 1" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -49,8 +49,8 @@
           </div>
           <q-input v-model="answers.cube" type="textarea" outlined autogrow label="Your response" />
           <q-stepper-navigation>
-            <q-btn @click="step = 4" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 2" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 4" color="accent" label="Continue" />
+            <q-btn flat @click="step = 2" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -69,8 +69,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 5" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 3" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 5" color="accent" label="Continue" />
+            <q-btn flat @click="step = 3" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -90,8 +90,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 6" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 4" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 6" color="accent" label="Continue" />
+            <q-btn flat @click="step = 4" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -111,8 +111,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 7" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 5" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 7" color="accent" label="Continue" />
+            <q-btn flat @click="step = 5" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -131,8 +131,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn @click="step = 8" color="secondary" label="Continue" />
-            <q-btn flat @click="step = 6" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn @click="step = 8" color="accent" label="Continue" />
+            <q-btn flat @click="step = 6" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
 
@@ -153,8 +153,8 @@
             label="Your response"
           />
           <q-stepper-navigation>
-            <q-btn color="secondary" label="Finish" @click="finishGame" />
-            <q-btn flat @click="step = 7" color="secondary" label="Back" class="q-ml-sm" />
+            <q-btn color="accent" label="Finish" @click="finishGame" />
+            <q-btn flat @click="step = 7" color="accent" label="Back" class="q-ml-sm" />
           </q-stepper-navigation>
         </q-step>
       </q-stepper>
@@ -163,7 +163,7 @@
         <div class="q-pa-md bg-positive text-white rounded-borders">
           Thanks! You have completed the cube questionnaire.
         </div>
-        <q-btn color="accent" label="Analyze" @click="analyzeResults" />
+        <q-btn color="secondary" label="Analyze" @click="analyzeResults" />
       </div>
 
       <div v-if="errorMessage" class="q-mt-md text-negative">
