@@ -15,11 +15,11 @@
       },
 
       "windows": {
-        "many": {
+        "multiple": {
           "interpretation": "You are curious, receptive to new ideas, happy to see the outside world, and interested in maintaining connections with others."
         },
-        "few": {
-          "interpretation": "You are selective and carefully choose what influences you and who you allow into your personal world."
+        "yes": {
+          "interpretation": "You are selective and choose carefully but receptive to trust others as well."
         },
         "none": {
           "interpretation": "Self-containment and introspection. You prefer privacy,relying on your own thoughts and experiences."
@@ -30,7 +30,7 @@
         "multiple": {
           "interpretation": "You may see many possible paths in life and enjoy having options available."
         },
-        "one": {
+        "yes": {
           "interpretation": "You may prefer a clear direction and concentrate deeply on chosen goals."
         },
         "none": {
