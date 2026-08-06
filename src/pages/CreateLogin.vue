@@ -33,12 +33,20 @@
         <q-input
           v-model="password"
           label="Password"
-          type="password"
+          :type="showPassword ? 'text' : 'password'"
           outlined
           dense
-          autocomplete="new-password"
+          autocomplete="off"
           :rules="[(val) => !!val || 'Password is required']"
-        />
+        >
+          <template #append>
+            <q-icon
+              :name="showPassword ? 'visibility_off' : 'visibility'"
+              class="cursor-pointer"
+              @click="showPassword = !showPassword"
+            />
+          </template>
+        </q-input>
 
         <div class="full-width">
           <q-btn color="primary" label="Create User" type="submit" class="full-width" />
@@ -64,6 +72,7 @@ const fname = ref('')
 const lname = ref('')
 const email = ref('')
 const password = ref('')
+const showPassword = ref(false)
 const message = ref('')
 const messageClass = ref('text-positive')
 

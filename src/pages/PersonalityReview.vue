@@ -13,12 +13,6 @@
             "
           >
             <div class="text-subtitle1">Saved responses</div>
-            <q-btn
-              color="primary"
-              label="Refresh"
-              :class="isNarrowScreen ? 'full-width' : ''"
-              @click="loadAnswers"
-            />
           </div>
 
           <q-table
@@ -47,7 +41,7 @@
                   v-for="col in props.cols.filter((col) => col.name !== 'expand')"
                   :key="col.name"
                   :props="props"
-                  :class="['wrap-content', col.name === 'fname' ? 'fname-col' : '']"
+                  :class="['wrap-content', `${col.name}-col`]"
                   style="white-space: normal; word-break: break-word"
                 >
                   {{ col.value }}
@@ -260,14 +254,24 @@ onMounted(async () => {
 <style scoped>
 @media (max-width: 412px) {
   .review-page .wrap-content {
-    max-width: 132px;
-    font-size: 0.84rem;
+    max-width: 96px;
+    font-size: 0.78rem;
   }
 
-  .review-page .fname-col {
-    min-width: 56px;
-    max-width: 56px;
-    width: 56px;
+  .review-page .fname-col,
+  .review-page .lname-col {
+    min-width: 48px;
+    max-width: 48px;
+    width: 48px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .review-page .date_time-col {
+    min-width: 88px;
+    max-width: 88px;
+    width: 88px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;

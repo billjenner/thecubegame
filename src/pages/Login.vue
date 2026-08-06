@@ -40,7 +40,6 @@
           <q-btn flat color="accent" label="Forgot Password" to="/forgot-password" />
           <q-btn flat color="accent" label="Create User" to="/create-login" />
         </div>
-        <!-- <q-btn flat color="primary" label="View Users" to="/users" class="full-width q-mt-sm" /> -->
       </q-form>
 
       <div v-if="message" class="q-mt-md text-center text-caption" :class="messageClass">

@@ -231,10 +231,16 @@ async function startGame() {
 }
 
 async function finishGame() {
-  await store.finishAnswers(answers.value)
-  if (store.error) {
+  const savedResult = await store.finishAnswers(answers.value)
+  if (store.error || !savedResult) {
     errorMessage.value = store.error
+    finished.value = false
+    return
   }
+
+  errorMessage.value = ''
+  latestSavedResult.value = savedResult
+  finished.value = true
 }
 
 async function analyzeResults() {
