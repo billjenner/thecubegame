@@ -213,9 +213,6 @@ const answers = ref({
   storm: '',
   flowers: '',
 })
-const formSubmitUrl =
-  import.meta.env.VITE_FORMSUBMIT_URL || 'https://formsubmit.co/bill.jenner@gmail.com'
-
 onMounted(() => {
   if (!store.currentUser || !store.currentUser.email) {
     router.push('/login')
@@ -305,6 +302,8 @@ async function sendResultsEmail(savedResult) {
   if (!toEmail) {
     return false
   }
+
+  const formSubmitUrl = import.meta.env.VITE_FORMSUBMIT_URL || `https://formsubmit.co/${toEmail}`
 
   const payload = {
     email: toEmail,
