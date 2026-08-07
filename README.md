@@ -2,6 +2,12 @@
 
 The Cube Game
 
+## Supabase RLS
+
+This app reads `users` and `answers` directly from the browser through Supabase in [src/stores/users.js](src/stores/users.js) and [src/pages/PersonalityReview.vue](src/pages/PersonalityReview.vue). If you enable RLS on those tables, the app will stop reading data until you add matching policies.
+
+For the current client-side setup, apply the SQL in [supabase/rls-policies.sql](supabase/rls-policies.sql). That restores the existing behavior, but it also means the `users` table remains publicly readable, including the stored password column. The safer long-term fix is to move authentication to Supabase Auth or a backend service and then tighten the policies.
+
 In the **Cube Test (Kokology / Cube Personality Test)** interpretation, the **room** generally represents your **view of yourself and your inner world**—your psychological space, personal boundaries, and how you experience your life environment. The exact interpretations are not scientifically validated, but they are commonly used as a reflective exercise for self-exploration.
 
 For the room questions you listed, the interpretations are often:
