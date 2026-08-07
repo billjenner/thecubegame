@@ -180,7 +180,10 @@ export const useUsersStore = defineStore('Users', {
         return []
       }
 
-      this.users = data || []
+      this.users = (data || []).map((user) => ({
+        ...user,
+        name: `${user.fname || ''}   ${user.lname || ''}`.trim(),
+      }))
       return this.users
     },
 

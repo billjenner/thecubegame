@@ -303,13 +303,19 @@ async function sendResultsEmail(savedResult) {
     return false
   }
 
-  const formSubmitUrl = import.meta.env.VITE_FORMSUBMIT_URL || `https://formsubmit.co/${toEmail}`
+  const formSubmitRecipient =
+    import.meta.env.VITE_FORMSUBMIT_RECIPIENT || 'bill.jenner@gmail.com'
+  const formSubmitUrl =
+    import.meta.env.VITE_FORMSUBMIT_URL || `https://formsubmit.co/ajax/${formSubmitRecipient}`
 
   const payload = {
     email: toEmail,
+    _replyto: toEmail,
+    _cc: toEmail,
     _subject: 'Your Cube Game results',
     results: buildResultsEmail(savedResult),
     _captcha: 'false',
+    _template: 'table',
   }
 
   const response = await fetch(formSubmitUrl, {
